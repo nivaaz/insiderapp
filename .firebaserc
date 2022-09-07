@@ -1,1 +1,5 @@
-{}
+{
+  "projects": {
+    "default": "insider-10c4a"
+  }
+}
