@@ -14,9 +14,10 @@ import {
 import ForCustomers from "../components/for-customers";
 import logo from "../assets/logo.svg";
 import Image from "next/image";
+import HowItWorks from "../components/how-it-works";
+import WhyInsider from "../components/why-insider";
 
 const Home = () => {
-  const iconSize = "4x";
   return (
     <div>
       <Head>
@@ -75,9 +76,10 @@ const Home = () => {
           <section className="bg-gray-900 text-white">
             <div className="py-16  md:max-w-4xl md:mx-auto"> 
               <p className="text-2xl font-para pt-4">
-                Insider is a no-code platform that provides brands with a simple
-                way to leverage web3 technologies to acquire and retain their
-                customers more effectively.
+                Insider is a no-code platform that allows brands to:
+                  <p>1. Leverage web3 technologies </p>
+                  <p>2. Acquire and retain their
+                customers more effectively</p>
               </p>
               <p className="text-2xl pt-16 font-para">
                 {" "}
@@ -86,140 +88,8 @@ const Home = () => {
             </div>
           </section>
 
-          <section className="md:max-w-4xl md:mx-auto flex flex-col py-16 bg-white rounded-lg p-8 mt-32 mb-16 px-4">
-            <h2 className="text-4xl font-heading pb-8 font-bold">
-              {" "}
-              How it works{" "}
-            </h2>
-            <div className="grid md:grid-cols-3">
-              <div className="p-2">
-                <div className="p-4 rounded-full bg-cyan-500 w-16 h-16 mb-4 shadow-md">
-                  <p className="text-3xl text-center pb-2  text-white"> 1 </p>{" "}
-                </div>
-                <span>
-                  {" "}
-                  <p className="text-lg">
-                    {" "}
-                    Onboard your team onto Insider and receive a personalised
-                    strategy session.
-                  </p>{" "}
-                </span>
-              </div>
-              <div className="p-2 md:pt-10">
-                <div className="p-4 rounded-full bg-cyan-500 w-16 h-16 mb-4 shadow-md">
-                  <p className="text-3xl text-center pb-2  text-white"> 2 </p>{" "}
-                </div>
-                <span>
-                  {" "}
-                  <p className="text-lg">
-                    Fill out a simple questionnaire to design your new NFT
-                    loyalty program
-                  </p>{" "}
-                </span>
-              </div>
-              <div className="p-2 md:pt-20">
-                <div className="p-4 rounded-full bg-cyan-500 w-16 h-16 mb-4 shadow-md ">
-                  <p className="text-3xl text-center pb-2  text-white"> 3 </p>{" "}
-                </div>
-                <span>
-                  {" "}
-                  <p className="text-lg">
-                    {" "}
-                    Receive a customised shopfront where your customers can buy
-                    your digital membership passes and see your brand presence
-                    grow.{" "}
-                  </p>{" "}
-                </span>
-              </div>
-            </div>
-          </section>
-
-          <section className="md:py-32 space-y-16 bg-white px-4">
-            <div className="md:max-w-4xl md:mx-auto">
-              <h2 className="text-4xl font-heading py-10 font-bold">
-                Why choose Insider{" "}
-              </h2>
-              {/*  */}
-              <div className="flex md:flex-row flex-col">
-                <div className="flex flex-col md:pr-4 pt-4 w-full">
-                  <div className="w-1/5">
-                    <FontAwesomeIcon
-                      color="#06b6d4"
-                      icon={faLightbulb}
-                      size={iconSize}
-                    />
-                  </div>
-                  <p className="text-2xl font-medium mt-4">
-                    Deep expertise across consumer marketing
-                  </p>
-                  <div className="p-4 border border-gray-800 rounded-md mt-4">
-                    <div>
-                      <p className="pt-4 text-lg">
-                        With deep expertise across consumer marketing, product
-                        design and web3, we know that it is more expensive than
-                        ever for brands to acquire and retain customers.
-                      </p>
-                      <p className="pt-4 text-lg">
-                        The market is inundated with loyalty programs that are
-                        ineffective at retaining customers.
-                      </p>
-                      <div className="bg-gray-800 text-white p-4 rounded-md mt-4">
-                        <p className="pb-4 text-lg">
-                          By launching NFT-enabled loyalty programs through
-                          Insider, you can:
-                        </p>
-                        <ul className="text-lg">
-                          <li>
-                            - Generate new customers and appeal to emerging
-                            spenders (Millennials and Gen Z)
-                          </li>
-                          <li>
-                            - Generate additional revenue and secondary
-                            royalties
-                          </li>
-                          <li>- Identify and activate superfan communities</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/*  */}
-                <div className="flex flex-col pt-4 md:pl-4 w-full">
-                  <div className="w-1/5">
-                    <FontAwesomeIcon
-                      color="#06b6d4"
-                      icon={faGears}
-                      size={iconSize}
-                    />
-                  </div>
-                  <p className="text-2xl py-4 font-medium">
-                    Easy access with our no code tools and coaching
-                  </p>
-                  <div className="p-4 border border-gray-800 rounded-md flex h-full">
-                    <div>
-                      <p className="pt-4 text-lg">
-                        We know that brands, like yours, are interested in using
-                        this technology to stand out from competitors, but are
-                        wary of the risks.
-                      </p>
-                      <div className="bg-gray-800 text-white p-4 rounded-md mt-4">
-                        <p className="pb-4 text-lg">
-                          We provide holistic coaching for your teams to
-                          onboard, design and effortlessly launch your tokenised
-                          brand loyalty programs through our no-code platform.
-                        </p>
-                      </div>
-                      <p className="pt-4 text-lg">
-                        {" "}
-                        We also factor in requirements around compliance, IP and
-                        branding.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+            <HowItWorks/>
+          <WhyInsider/>
           <ForCustomers />
           <FirebaseContext.Consumer>
             {() => (
