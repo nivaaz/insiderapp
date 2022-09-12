@@ -19,19 +19,19 @@ const Home = () => {
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
           rel="stylesheet"
         />
       </Head>
       <FirebaseContext.Provider value={app}>
-        <main className="w-full mt-4 mx-auto md:max-w-4xl md:mt-8">
+        <main className="w-full mt-4 mx-auto md:max-w-4xl md:mt-8 font-para">
           <nav className="flex justify-between w-full">
             {/* TODO: change to logo */}
             <p> Insider </p>
             <button
-              className="border px-4 py-2 rounded-xl"
+              className="border p-4 ml-4 rounded-xl bg-black text-white"
               onClick={() => {
                 window.scrollTo({
                   top: 1000,
@@ -43,33 +43,35 @@ const Home = () => {
             </button>
           </nav>
           <div className="h-screen flex flex-col justify-center pt-24 md:pt-0">
-            <h1 className="text-4xl  md:text-8xl">
+            <h1 className="text-4xl  md:text-8xl font-heading font-bold">
               Turn customers into investors and supercharge loyalty
             </h1>
-
-            <p className="text-2xl pt-16">
-              Insider is a no-code platform that provides brands with a simple
-              way to leverage web3 technologies to acquire and retain their
-              customers more effectively.
-            </p>
-            <p className="text-2xl pt-16">
-              {" "}
-              It’s the new and easier way to launch NFT loyalty programs.
-            </p>
+            <div className="border-l-4 pl-2 border-pink-500 mt-16">
+              <p className="text-2xl  font-para pt-4">
+                Insider is a no-code platform that provides brands with a simple
+                way to leverage web3 technologies to acquire and retain their
+                customers more effectively.
+              </p>
+              <p className="text-2xl pt-16 font-para">
+                {" "}
+                It’s the new and easier way to launch NFT loyalty programs.
+              </p>
+            </div>
           </div>
-
           <section className="flex flex-col pb-32">
-            <div> </div>
-            <h2 className="text-center text-4xl py-10"> How it works </h2>
+            <h2 className="text-4xl py-10 font-bold"> How it works </h2>
 
             <div className="grid md:grid-cols-3">
               <div className="p-2">
                 <div className="p-4 rounded-full bg-white w-16 h-16 mb-4">
-                  <p className="text-3xl text-center pb-2 text-black"> 1 </p>{" "}
+                  <p className="text-3xl text-center pb-2 text-[#E1479F]">
+                    {" "}
+                    1{" "}
+                  </p>{" "}
                 </div>
                 <span>
                   {" "}
-                  <p>
+                  <p className="text-xl">
                     {" "}
                     Onboard your team onto Insider and receive a personalised
                     strategy session.
@@ -78,11 +80,14 @@ const Home = () => {
               </div>
               <div className="p-2 md:pt-10">
                 <div className="p-4 rounded-full bg-white w-16 h-16 mb-4">
-                  <p className="text-3xl text-center pb-2 text-black"> 2 </p>{" "}
+                  <p className="text-3xl text-center pb-2 text-[#E1479F]">
+                    {" "}
+                    2{" "}
+                  </p>{" "}
                 </div>
                 <span>
                   {" "}
-                  <p>
+                  <p className="text-xl">
                     Fill out a simple questionnaire to design your new NFT
                     loyalty program
                   </p>{" "}
@@ -90,11 +95,14 @@ const Home = () => {
               </div>
               <div className="p-2 md:pt-20">
                 <div className="p-4 rounded-full bg-white w-16 h-16 mb-4 ">
-                  <p className="text-3xl text-center pb-2 text-black"> 3 </p>{" "}
+                  <p className="text-3xl text-center pb-2 text-[#E1479F]">
+                    {" "}
+                    3{" "}
+                  </p>{" "}
                 </div>
                 <span>
                   {" "}
-                  <p>
+                  <p className="text-xl">
                     {" "}
                     Receive a customised shopfront where your customers can buy
                     your digital membership passes and see your brand presence
@@ -104,51 +112,56 @@ const Home = () => {
               </div>
             </div>
           </section>
+          <hr className="border-pink-500 mb-16" />
+
           <section className=" pb-32">
             <div>
-              <h2 className="md:text-center text-4xl py-10">
-                Why Choose Insider{" "}
-              </h2>
+              <h2 className="text-4xl py-10 font-bold">Why Choose Insider </h2>
               {/*  */}
               <div className="flex md:flex-row flex-col">
                 <div className="flex flex-col md:flex-row pt-4 w-full">
                   <div className="w-1/5">
                     <FontAwesomeIcon
-                      color="#040E2B"
+                      color="#E1479F"
                       icon={faLightbulb}
                       size={iconSize}
                     />
                   </div>
                   <div className="p-4">
-                    <p className="font-bold text-xl">
+                    <p className="text-2xl">
                       {" "}
                       Deep expertise across consumer marketing{" "}
                     </p>
+                    <hr className="border-pink-500" />
+
                     <div>
-                      <p className="pt-4">
+                      <p className="pt-4 text-xl">
                         {" "}
                         With deep expertise across consumer marketing, product
                         design and web3, we know that it is more expensive than
                         ever for brands to acquire and retain customers.
                       </p>
-                      <p className="pt-4">
+                      <p className="pt-4 text-xl">
                         The market is inundated with loyalty programs that are
                         ineffective at retaining customers.
                       </p>
-                      <p className="pt-4">
-                        By launching NFT-enabled loyalty programs through
-                        Insider, brands can:
-                      </p>
-                      <ul>
-                        <li>
-                          - Generate new customers and appeal to emerging
-                          spenders (Millennials and Gen Z)
-                        </li>
-                        <li>
-                          - Generate additional revenue and secondary royalties
-                        </li>
-                        <li>- Identify and activate superfan communities</li>
-                      </ul>
+                      <div className="border border-2 border-pink-500 p-4 rounded-md mt-4">
+                        <p className="pb-4 text-lg">
+                          By launching NFT-enabled loyalty programs through
+                          Insider, you can:
+                        </p>
+                        <ul className="text-lg">
+                          <li>
+                            - Generate new customers and appeal to emerging
+                            spenders (Millennials and Gen Z)
+                          </li>
+                          <li>
+                            - Generate additional revenue and secondary
+                            royalties
+                          </li>
+                          <li>- Identify and activate superfan communities</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -156,27 +169,34 @@ const Home = () => {
                 <div className="flex flex-col md:flex-row pt-4 w-full">
                   <div className="w-1/5">
                     <FontAwesomeIcon
-                      color="#040E2B"
+                      color="#E1479F"
                       icon={faGears}
                       size={iconSize}
                     />
                   </div>
                   <div className="p-4">
-                    <p className="font-bold  text-xl">
+                    <p className="text-2xl">
                       Easy access with our no code tools and coaching
                     </p>
+                    <hr className="border-pink-500" />
+
                     <div>
-                      <p className="pt-4">
+                      <p className="pt-4 text-xl">
                         We know that brands, like yours, are interested in using
                         this technology to stand out from competitors, but are
                         wary of the risks.
                       </p>
-                      <p className="pt-4">
-                        We can provide holistic coaching for your teams to
-                        onboard, design and effortlessly launch your tokenised
-                        brand loyalty programs through our no-code platform.
-                        Further, we can work with you in consideration of
-                        compliance, IP and brand requirements.
+                      <div className="border border-2 border-pink-500 p-4 rounded-md mt-4">
+                        <p className="pb-4 text-xl">
+                          We provide holistic coaching for your teams to
+                          onboard, design and effortlessly launch your tokenised
+                          brand loyalty programs through our no-code platform.
+                        </p>
+                      </div>
+                      <p className="pt-4 text-xl">
+                        {" "}
+                        We also factor in requirements around compliance, IP and
+                        branding.
                       </p>
                     </div>
                   </div>
@@ -226,8 +246,11 @@ const EmailCapture = () => {
     );
   } else {
     return (
-      <>
-        <p className="py-4 mx-auto"> Be the first to know when we launch</p>
+      <div className="flex flex-col justify-center py-32">
+        <p className="pb-8 mx-auto text-xl">
+          {" "}
+          Be the first to know when we launch
+        </p>
         <span className="mx-auto flex">
           <input
             onChange={(e) => setEmail(e.target.value)}
@@ -258,7 +281,7 @@ const EmailCapture = () => {
             Join the waiting list{" "}
           </button>
         </span>
-      </>
+      </div>
     );
   }
 };
