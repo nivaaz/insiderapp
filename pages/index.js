@@ -125,7 +125,7 @@ const Home = () => {
             <FontAwesomeIcon color="#fff" icon={faBoltLightning} size={"5x"} />
           </div>
           <div className="mx-auto">
-            <FontAwesomeIcon color="#fff" icon={faMessage} size={"5x"} />
+            <FontAwesomeIcon color="#fff" icon={faMessage} size={"5x"} bounce />
           </div>
           <div className="mx-auto">
             <FontAwesomeIcon color="#fff" icon={faTicket} size={"5x"} />

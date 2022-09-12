@@ -10,7 +10,7 @@ const ForCustomers = () => {
           <FontAwesomeIcon color="#fff" icon={faCreditCard} size={"5x"} />
         </div>
         <div className="mx-auto">
-          <FontAwesomeIcon color="#fff" icon={faGift} size={"5x"} />
+          <FontAwesomeIcon color="#fff" icon={faGift} size={"5x"} bounce  />
         </div>
         <div className="mx-auto">
           <FontAwesomeIcon color="#fff" icon={faShoppingCart} size={"5x"} />
