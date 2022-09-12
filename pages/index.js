@@ -3,17 +3,11 @@ import { useContext, useState } from "react";
 import { FirebaseContext } from "../components/firebaseProvider";
 import { addEmailToWaitlist, app } from "../components/firebase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLightbulb, faMessage } from "@fortawesome/free-regular-svg-icons";
 import {
   faBolt,
-  faBoltLightning,
-  faGears,
   faRocket,
-  faTicket,
 } from "@fortawesome/free-solid-svg-icons";
 import ForCustomers from "../components/for-customers";
-import logo from "../assets/logo.svg";
-import Image from "next/image";
 import HowItWorks from "../components/how-it-works";
 import WhyInsider from "../components/why-insider";
 
@@ -39,9 +33,6 @@ const Home = () => {
           <nav className=" w-full pt-8 bg-white">
             <div className="md:max-w-4xl mx-auto flex justify-between">
               {/* TODO: change to logo */}
-              {/* <div className="w-fit flex justify-start "> 
-             <Image src={logo} height="20px" className="mr-auto ml-0"/>
-             </div> */}
               <p className="font-bold text-lg my-auto text-[#1FC8E1] drop-shadow-md ">
                 Insider{" "}
               </p>
@@ -73,8 +64,8 @@ const Home = () => {
             </div>
           </section>
 
-          <section className="bg-gray-900 text-white">
-            <div className="py-16  md:max-w-4xl md:mx-auto"> 
+          <section className="bg-gray-900 text-white ">
+            <div className="py-16  md:max-w-4xl md:mx-auto p-2"> 
               <p className="text-2xl font-para pt-4">
                 Insider is a no-code platform that allows brands to:
                   <p>1. Leverage web3 technologies </p>
