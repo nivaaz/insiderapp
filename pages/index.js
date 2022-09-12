@@ -1,21 +1,21 @@
 import Head from "next/head";
 import { useContext, useState } from "react";
-import styles from "../styles/Home.module.css";
 import { FirebaseContext } from "../components/firebaseProvider";
 import { addEmailToWaitlist, app } from "../components/firebase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLightbulb } from "@fortawesome/free-regular-svg-icons";
+import { faLightbulb, faMessage } from "@fortawesome/free-regular-svg-icons";
 import {
   faBolt,
+  faBoltLightning,
   faGears,
-  faPiggyBank,
-  faSwatchbook,
+  faTicket,
 } from "@fortawesome/free-solid-svg-icons";
+import ForCustomers from "../components/for-customers";
 
 const Home = () => {
   const iconSize = "4x";
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Insider</title>
         <meta
@@ -31,8 +31,8 @@ const Home = () => {
         />
       </Head>
       <FirebaseContext.Provider value={app}>
-        <main className="w-full mt-4 mx-auto md:max-w-4xl md:mt-8 font-para">
-          <nav className="flex justify-between w-full">
+        <main className="w-full m-0 p-0 mt-4 md:mt-8 font-para">
+          <nav className="flex justify-between w-full md:max-w-4xl mx-auto">
             {/* TODO: change to logo */}
             <p className="font-bold text-lg my-auto text-[#1FC8E1] drop-shadow-md ">
               {" "}
@@ -50,8 +50,9 @@ const Home = () => {
               Join the waitlist
             </button>
           </nav>
+          <section className="md:max-w-4xl md:mx-auto px-4"> 
           <div className="h-screen flex flex-col justify-center pt-24 md:pt-0">
-            <h1 className="text-4xl  md:text-8xl font-heading font-bold">
+            <h1 className="text-4xl font-heading  md:text-8xl font-heading font-bold">
               Turn customers into investors and supercharge loyalty
               <FontAwesomeIcon
                 color="#1FC8E1"
@@ -73,11 +74,12 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <section className="flex flex-col py-16 bg-white rounded-lg p-8 mt-32 md:mt-0">
-            <h2 className="text-4xl pb-8 font-bold"> How it works </h2>
+          </section>
+          <section className="md:max-w-4xl md:mx-auto flex flex-col py-16 bg-white rounded-lg p-8 mt-32 md:mt-0 mb-16 px-4">
+            <h2 className="text-4xl font-heading pb-8 font-bold"> How it works </h2>
             <div className="grid md:grid-cols-3">
               <div className="p-2">
-                <div className="p-4 rounded-full bg-pink-600 w-16 h-16 mb-4 shadow-md">
+                <div className="p-4 rounded-full bg-cyan-500 w-16 h-16 mb-4 shadow-md">
                   <p className="text-3xl text-center pb-2  text-white"> 1 </p>{" "}
                 </div>
                 <span>
@@ -90,7 +92,7 @@ const Home = () => {
                 </span>
               </div>
               <div className="p-2 md:pt-10">
-                <div className="p-4 rounded-full bg-pink-600 w-16 h-16 mb-4 shadow-md">
+                <div className="p-4 rounded-full bg-cyan-500 w-16 h-16 mb-4 shadow-md">
                   <p className="text-3xl text-center pb-2  text-white"> 2 </p>{" "}
                 </div>
                 <span>
@@ -102,7 +104,7 @@ const Home = () => {
                 </span>
               </div>
               <div className="p-2 md:pt-20">
-                <div className="p-4 rounded-full bg-pink-600 w-16 h-16 mb-4 shadow-md ">
+                <div className="p-4 rounded-full bg-cyan-500 w-16 h-16 mb-4 shadow-md ">
                   <p className="text-3xl text-center pb-2  text-white"> 3 </p>{" "}
                 </div>
                 <span>
@@ -117,17 +119,27 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <hr className="border-cyan-500 my-16" />
-
-          <section className="border-b-2 md:pb-32 space-y-16">
+         
+        <div className="bg-pink-600 py-32 grid grid-cols-3">
+            <div className="mx-auto">
+            <FontAwesomeIcon color="#fff" icon={faBoltLightning} size={"5x"} />
+          </div>
+          <div className="mx-auto">
+            <FontAwesomeIcon color="#fff" icon={faMessage} size={"5x"} />
+          </div>
+          <div className="mx-auto">
+            <FontAwesomeIcon color="#fff" icon={faTicket} size={"5x"} />
+          </div>
+        </div>
+          <section className="md:max-w-4xl md:mx-auto border-b-2 md:pb-32 space-y-16  px-4">
             <div>
-              <h2 className="text-4xl py-10 font-bold">Why choose insider </h2>
+              <h2 className="text-4xl font-heading py-10 font-bold">Why choose Insider </h2>
               {/*  */}
               <div className="flex md:flex-row flex-col">
                 <div className="flex flex-col md:flex-row pt-4 w-full">
                   <div className="w-1/5">
                     <FontAwesomeIcon
-                      color="#E1479F"
+                      color="#06b6d4"
                       icon={faLightbulb}
                       size={iconSize}
                     />
@@ -137,7 +149,7 @@ const Home = () => {
                       {" "}
                       Deep expertise across consumer marketing{" "}
                     </p>
-                    <hr className="border-pink-500" />
+                    <hr className="border-cyan-500" />
 
                     <div>
                       <p className="pt-4 text-xl">
@@ -174,7 +186,7 @@ const Home = () => {
                 <div className="flex flex-col md:flex-row pt-4 w-full">
                   <div className="w-1/5">
                     <FontAwesomeIcon
-                      color="#E1479F"
+                      color="#06b6d4"
                       icon={faGears}
                       size={iconSize}
                     />
@@ -183,7 +195,7 @@ const Home = () => {
                     <p className="text-2xl">
                       Easy access with our no code tools and coaching
                     </p>
-                    <hr className="border-pink-500" />
+                    <hr className="border-cyan-500" />
 
                     <div>
                       <p className="pt-4 text-xl">
@@ -192,7 +204,7 @@ const Home = () => {
                         wary of the risks.
                       </p>
                       <div className="border border-2 border-pink-500 p-4 rounded-md mt-4">
-                        <p className="pb-4 text-xl">
+                        <p className="pb-4 text-lg">
                           We provide holistic coaching for your teams to
                           onboard, design and effortlessly launch your tokenised
                           brand loyalty programs through our no-code platform.
@@ -209,6 +221,7 @@ const Home = () => {
               </div>
             </div>
           </section>
+          <ForCustomers/>
           <FirebaseContext.Consumer>
             {() => (
               <>
