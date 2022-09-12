@@ -5,7 +5,12 @@ import { FirebaseContext } from "../components/firebaseProvider";
 import { addEmailToWaitlist, app } from "../components/firebase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLightbulb } from "@fortawesome/free-regular-svg-icons";
-import { faGears, faSwatchbook } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBolt,
+  faGears,
+  faPiggyBank,
+  faSwatchbook,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   const iconSize = "4x";
@@ -29,7 +34,10 @@ const Home = () => {
         <main className="w-full mt-4 mx-auto md:max-w-4xl md:mt-8 font-para">
           <nav className="flex justify-between w-full">
             {/* TODO: change to logo */}
-            <p> Insider </p>
+            <p className="font-bold text-lg my-auto text-[#1FC8E1] drop-shadow-md ">
+              {" "}
+              Insider{" "}
+            </p>
             <button
               className="border p-4 ml-4 rounded-xl bg-black text-white"
               onClick={() => {
@@ -45,6 +53,13 @@ const Home = () => {
           <div className="h-screen flex flex-col justify-center pt-24 md:pt-0">
             <h1 className="text-4xl  md:text-8xl font-heading font-bold">
               Turn customers into investors and supercharge loyalty
+              <FontAwesomeIcon
+                color="#1FC8E1"
+                icon={faBolt}
+                size="2xs"
+                className="pl-4"
+                bounce
+              />
             </h1>
             <div className="border-l-4 pl-2 border-pink-500 mt-16">
               <p className="text-2xl  font-para pt-4">
@@ -58,16 +73,12 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <section className="flex flex-col pb-32">
-            <h2 className="text-4xl py-10 font-bold"> How it works </h2>
-
+          <section className="flex flex-col py-16 bg-white rounded-lg p-8 mt-32 md:mt-0">
+            <h2 className="text-4xl pb-8 font-bold"> How it works </h2>
             <div className="grid md:grid-cols-3">
               <div className="p-2">
-                <div className="p-4 rounded-full bg-white w-16 h-16 mb-4">
-                  <p className="text-3xl text-center pb-2 text-[#E1479F]">
-                    {" "}
-                    1{" "}
-                  </p>{" "}
+                <div className="p-4 rounded-full bg-pink-600 w-16 h-16 mb-4 shadow-md">
+                  <p className="text-3xl text-center pb-2  text-white"> 1 </p>{" "}
                 </div>
                 <span>
                   {" "}
@@ -79,11 +90,8 @@ const Home = () => {
                 </span>
               </div>
               <div className="p-2 md:pt-10">
-                <div className="p-4 rounded-full bg-white w-16 h-16 mb-4">
-                  <p className="text-3xl text-center pb-2 text-[#E1479F]">
-                    {" "}
-                    2{" "}
-                  </p>{" "}
+                <div className="p-4 rounded-full bg-pink-600 w-16 h-16 mb-4 shadow-md">
+                  <p className="text-3xl text-center pb-2  text-white"> 2 </p>{" "}
                 </div>
                 <span>
                   {" "}
@@ -94,11 +102,8 @@ const Home = () => {
                 </span>
               </div>
               <div className="p-2 md:pt-20">
-                <div className="p-4 rounded-full bg-white w-16 h-16 mb-4 ">
-                  <p className="text-3xl text-center pb-2 text-[#E1479F]">
-                    {" "}
-                    3{" "}
-                  </p>{" "}
+                <div className="p-4 rounded-full bg-pink-600 w-16 h-16 mb-4 shadow-md ">
+                  <p className="text-3xl text-center pb-2  text-white"> 3 </p>{" "}
                 </div>
                 <span>
                   {" "}
@@ -112,11 +117,11 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <hr className="border-pink-500 mb-16" />
+          <hr className="border-cyan-500 my-16" />
 
-          <section className=" pb-32">
+          <section className="border-b-2 md:pb-32 space-y-16">
             <div>
-              <h2 className="text-4xl py-10 font-bold">Why Choose Insider </h2>
+              <h2 className="text-4xl py-10 font-bold">Why choose insider </h2>
               {/*  */}
               <div className="flex md:flex-row flex-col">
                 <div className="flex flex-col md:flex-row pt-4 w-full">
@@ -251,28 +256,35 @@ const EmailCapture = () => {
           {" "}
           Be the first to know when we launch
         </p>
-        <span className="mx-auto flex">
-          <input
-            onChange={(e) => setEmail(e.target.value)}
-            className="bg-white rounded-lg p-4 text-black"
-            placeholder="ada@lovelace.com"
-            type="email"
-            id="email"
-            size="30"
-            required
-          />
-          <select
-            name="customerType"
-            id="customerType"
-            className="bg-white border rounded-md px-4 mx-4"
-            onChange={(e) => {
-              setCustomerType(e.target.value);
-            }}
-          >
-            <option value="shopper">Shopper</option>
-            <option value="investor">Investor </option>
-            <option value="business owner">Business Owner</option>
-          </select>
+        <span className="mx-auto flex flex-col space-y-8 align-center md:flex-row">
+          <div className="flex flex-col mt-auto">
+            {" "}
+            <label>My email is</label>{" "}
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              className="bg-white rounded-lg p-4 text-black"
+              placeholder="ada@lovelace.com"
+              type="email"
+              id="email"
+              size="25"
+              required
+            />
+          </div>
+          <div className="flex flex-col mt-0">
+            <label> And I am </label>
+            <select
+              name="customerType"
+              id="customerType"
+              className="bg-white border rounded-md mx-4 py-4"
+              onChange={(e) => {
+                setCustomerType(e.target.value);
+              }}
+            >
+              <option value="shopper">Shopper</option>
+              <option value="investor">Investor </option>
+              <option value="business owner">Business Owner</option>
+            </select>
+          </div>
           <p className="text-red font-bold"> {error}</p>
           <button
             className="border p-4 ml-4 rounded-xl bg-black text-white"
