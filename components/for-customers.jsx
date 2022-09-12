@@ -5,21 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const ForCustomers = () => {
   return (
     <>
-      <div className="bg-cyan-600 py-32 grid grid-cols-3">
-        <div className="mx-auto">
-          <FontAwesomeIcon color="#fff" icon={faCreditCard} size={"5x"} />
-        </div>
-        <div className="mx-auto">
-          <FontAwesomeIcon color="#fff" icon={faGift} size={"5x"} bounce  />
-        </div>
-        <div className="mx-auto">
-          <FontAwesomeIcon color="#fff" icon={faShoppingCart} size={"5x"} />
-        </div>
-      </div>
-      <section className="py-16 px-4">
-        <div className="md:max-w-4xl mx-auto bg-white md:p-4 m-4 rounded-lg  px-2">
+      <section className="py-16">
+        <div className="m-4 md:max-w-4xl mx-auto rounded-lg bg-white md:px-4 px-2">
           <h2 className="text-4xl font-heading py-8 font-bold">
-            {" "}
             But, what about customers?
           </h2>
           <p className="text-lg">
@@ -30,9 +18,8 @@ const ForCustomers = () => {
             For customers, Insider digital passes represent ownership of your
             loyalty programs with your favourite brands.
           </p>
-          <h3 className="text-xl font-bold py-8 font-heading">
-            {" "}
-            How does it work?
+          <h3 className="text-2xl font-bold py-8 font-heading ">
+            How does it work for customers?
           </h3>
           <div className="grid md:grid-cols-3">
             <div className="flex flex-col px-4 border border-cyan-500 md:border-0 rounded-md my-4 pt-4">

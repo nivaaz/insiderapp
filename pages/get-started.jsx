@@ -19,7 +19,6 @@ const GetStarted = () => {
           Our website link is
           <input className="mx-1 p-4 bg-white border border-slate-200 rounded-full" type="url" />
         </label>
-        
       </section>
 
       {/* 

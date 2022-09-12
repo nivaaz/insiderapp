@@ -8,9 +8,12 @@ import {
   faBolt,
   faBoltLightning,
   faGears,
+  faRocket,
   faTicket,
 } from "@fortawesome/free-solid-svg-icons";
 import ForCustomers from "../components/for-customers";
+import logo from "../assets/logo.svg";
+import Image from "next/image";
 
 const Home = () => {
   const iconSize = "4x";
@@ -31,39 +34,47 @@ const Home = () => {
         />
       </Head>
       <FirebaseContext.Provider value={app}>
-        <main className="w-full m-0 p-0 mt-4 md:mt-8 font-para">
-          <nav className="flex justify-between w-full md:max-w-4xl mx-auto">
-            {/* TODO: change to logo */}
-            <p className="font-bold text-lg my-auto text-[#1FC8E1] drop-shadow-md ">
-              {" "}
-              Insider{" "}
-            </p>
-            <button
-              className="border p-4 ml-4 rounded-xl bg-black text-white"
-              onClick={() => {
-                window.scrollTo({
-                  top: 1000,
-                  behavior: "smooth",
-                });
-              }}
-            >
-              Join the waitlist
-            </button>
+        <main className="w-full -mt-4 p-0 font-para">
+          <nav className=" w-full pt-8 bg-white">
+            <div className="md:max-w-4xl mx-auto flex justify-between">
+              {/* TODO: change to logo */}
+              {/* <div className="w-fit flex justify-start "> 
+             <Image src={logo} height="20px" className="mr-auto ml-0"/>
+             </div> */}
+              <p className="font-bold text-lg my-auto text-[#1FC8E1] drop-shadow-md ">
+                Insider{" "}
+              </p>
+              <button
+                className="border p-4 ml-4 rounded-xl bg-black text-white"
+                onClick={() => {
+                  window.scrollTo({
+                    top: 1000,
+                    behavior: "smooth",
+                  });
+                }}
+              >
+                Join the waitlist
+              </button>
+            </div>
           </nav>
-          <section className="md:max-w-4xl md:mx-auto px-4"> 
-          <div className="h-screen flex flex-col justify-center pt-24 md:pt-0">
-            <h1 className="text-4xl font-heading  md:text-8xl font-heading font-bold">
-              Turn customers into investors and supercharge loyalty
-              <FontAwesomeIcon
-                color="#1FC8E1"
-                icon={faBolt}
-                size="2xs"
-                className="pl-4"
-                bounce
-              />
-            </h1>
-            <div className="border-l-4 pl-2 border-pink-500 mt-16">
-              <p className="text-2xl  font-para pt-4">
+          <section className="px-4 bg-white">
+            <div className="md:max-w-4xl md:mx-auto h-screen flex flex-col justify-center pt-24 md:pt-0 ">
+              <h1 className="text-4xl font-heading  md:text-8xl font-heading font-bold">
+                Turn customers into investors and supercharge loyalty
+                <FontAwesomeIcon
+                  color="#1FC8E1"
+                  icon={faBolt}
+                  size="2xs"
+                  className="pl-4"
+                  bounce
+                />
+              </h1>
+            </div>
+          </section>
+
+          <section className="bg-gray-900 text-white">
+            <div className="py-16  md:max-w-4xl md:mx-auto"> 
+              <p className="text-2xl font-para pt-4">
                 Insider is a no-code platform that provides brands with a simple
                 way to leverage web3 technologies to acquire and retain their
                 customers more effectively.
@@ -73,10 +84,13 @@ const Home = () => {
                 It’s the new and easier way to launch NFT loyalty programs.
               </p>
             </div>
-          </div>
           </section>
-          <section className="md:max-w-4xl md:mx-auto flex flex-col py-16 bg-white rounded-lg p-8 mt-32 md:mt-0 mb-16 px-4">
-            <h2 className="text-4xl font-heading pb-8 font-bold"> How it works </h2>
+
+          <section className="md:max-w-4xl md:mx-auto flex flex-col py-16 bg-white rounded-lg p-8 mt-32 mb-16 px-4">
+            <h2 className="text-4xl font-heading pb-8 font-bold">
+              {" "}
+              How it works{" "}
+            </h2>
             <div className="grid md:grid-cols-3">
               <div className="p-2">
                 <div className="p-4 rounded-full bg-cyan-500 w-16 h-16 mb-4 shadow-md">
@@ -84,7 +98,7 @@ const Home = () => {
                 </div>
                 <span>
                   {" "}
-                  <p className="text-xl">
+                  <p className="text-lg">
                     {" "}
                     Onboard your team onto Insider and receive a personalised
                     strategy session.
@@ -97,7 +111,7 @@ const Home = () => {
                 </div>
                 <span>
                   {" "}
-                  <p className="text-xl">
+                  <p className="text-lg">
                     Fill out a simple questionnaire to design your new NFT
                     loyalty program
                   </p>{" "}
@@ -109,7 +123,7 @@ const Home = () => {
                 </div>
                 <span>
                   {" "}
-                  <p className="text-xl">
+                  <p className="text-lg">
                     {" "}
                     Receive a customised shopfront where your customers can buy
                     your digital membership passes and see your brand presence
@@ -119,24 +133,15 @@ const Home = () => {
               </div>
             </div>
           </section>
-         
-        <div className="bg-pink-600 py-32 grid grid-cols-3">
-            <div className="mx-auto">
-            <FontAwesomeIcon color="#fff" icon={faBoltLightning} size={"5x"} />
-          </div>
-          <div className="mx-auto">
-            <FontAwesomeIcon color="#fff" icon={faMessage} size={"5x"} bounce />
-          </div>
-          <div className="mx-auto">
-            <FontAwesomeIcon color="#fff" icon={faTicket} size={"5x"} />
-          </div>
-        </div>
-          <section className="md:max-w-4xl md:mx-auto border-b-2 md:pb-32 space-y-16  px-4">
-            <div>
-              <h2 className="text-4xl font-heading py-10 font-bold">Why choose Insider </h2>
+
+          <section className="md:py-32 space-y-16 bg-white px-4">
+            <div className="md:max-w-4xl md:mx-auto">
+              <h2 className="text-4xl font-heading py-10 font-bold">
+                Why choose Insider{" "}
+              </h2>
               {/*  */}
               <div className="flex md:flex-row flex-col">
-                <div className="flex flex-col md:flex-row pt-4 w-full">
+                <div className="flex flex-col md:pr-4 pt-4 w-full">
                   <div className="w-1/5">
                     <FontAwesomeIcon
                       color="#06b6d4"
@@ -144,25 +149,21 @@ const Home = () => {
                       size={iconSize}
                     />
                   </div>
-                  <div className="p-4">
-                    <p className="text-2xl">
-                      {" "}
-                      Deep expertise across consumer marketing{" "}
-                    </p>
-                    <hr className="border-cyan-500" />
-
+                  <p className="text-2xl font-medium mt-4">
+                    Deep expertise across consumer marketing
+                  </p>
+                  <div className="p-4 border border-gray-800 rounded-md mt-4">
                     <div>
-                      <p className="pt-4 text-xl">
-                        {" "}
+                      <p className="pt-4 text-lg">
                         With deep expertise across consumer marketing, product
                         design and web3, we know that it is more expensive than
                         ever for brands to acquire and retain customers.
                       </p>
-                      <p className="pt-4 text-xl">
+                      <p className="pt-4 text-lg">
                         The market is inundated with loyalty programs that are
                         ineffective at retaining customers.
                       </p>
-                      <div className="border border-2 border-pink-500 p-4 rounded-md mt-4">
+                      <div className="bg-gray-800 text-white p-4 rounded-md mt-4">
                         <p className="pb-4 text-lg">
                           By launching NFT-enabled loyalty programs through
                           Insider, you can:
@@ -183,7 +184,7 @@ const Home = () => {
                   </div>
                 </div>
                 {/*  */}
-                <div className="flex flex-col md:flex-row pt-4 w-full">
+                <div className="flex flex-col pt-4 md:pl-4 w-full">
                   <div className="w-1/5">
                     <FontAwesomeIcon
                       color="#06b6d4"
@@ -191,26 +192,24 @@ const Home = () => {
                       size={iconSize}
                     />
                   </div>
-                  <div className="p-4">
-                    <p className="text-2xl">
-                      Easy access with our no code tools and coaching
-                    </p>
-                    <hr className="border-cyan-500" />
-
+                  <p className="text-2xl py-4 font-medium">
+                    Easy access with our no code tools and coaching
+                  </p>
+                  <div className="p-4 border border-gray-800 rounded-md flex h-full">
                     <div>
-                      <p className="pt-4 text-xl">
+                      <p className="pt-4 text-lg">
                         We know that brands, like yours, are interested in using
                         this technology to stand out from competitors, but are
                         wary of the risks.
                       </p>
-                      <div className="border border-2 border-pink-500 p-4 rounded-md mt-4">
+                      <div className="bg-gray-800 text-white p-4 rounded-md mt-4">
                         <p className="pb-4 text-lg">
                           We provide holistic coaching for your teams to
                           onboard, design and effortlessly launch your tokenised
                           brand loyalty programs through our no-code platform.
                         </p>
                       </div>
-                      <p className="pt-4 text-xl">
+                      <p className="pt-4 text-lg">
                         {" "}
                         We also factor in requirements around compliance, IP and
                         branding.
@@ -221,7 +220,7 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <ForCustomers/>
+          <ForCustomers />
           <FirebaseContext.Consumer>
             {() => (
               <>
@@ -264,49 +263,67 @@ const EmailCapture = () => {
     );
   } else {
     return (
-      <div className="flex flex-col justify-center py-32">
-        <p className="pb-8 mx-auto text-xl">
-          {" "}
-          Be the first to know when we launch
+      <section className="bg-gray-900 text-white"> 
+      <div className="md:max-w-4xl mx-auto p-2 md:p-16 rounded-lg flex flex-col justify-center py-32 ">
+        <p className="pb-8 mx-auto text-5xl">
+          Be the first to know when we launch{" "}
+          <FontAwesomeIcon
+            color="#ec4899"
+            icon={faRocket}
+            size="2xs"
+            className="pl-4 -mb-2"
+            bounce
+          />
         </p>
         <span className="mx-auto flex flex-col space-y-8 align-center md:flex-row">
           <div className="flex flex-col mt-auto">
-            {" "}
-            <label>My email is</label>{" "}
-            <input
-              onChange={(e) => setEmail(e.target.value)}
-              className="bg-white rounded-lg p-4 text-black"
-              placeholder="ada@lovelace.com"
-              type="email"
-              id="email"
-              size="25"
-              required
-            />
+            <label>
+              My email is
+              <input
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-white rounded-lg p-4 text-black"
+                placeholder="ada@lovelace.com"
+                type="email"
+                id="email"
+                size="25"
+                required
+              />
+            </label>{" "}
           </div>
           <div className="flex flex-col mt-0">
-            <label> And I am </label>
-            <select
-              name="customerType"
-              id="customerType"
-              className="bg-white border rounded-md mx-4 py-4"
-              onChange={(e) => {
-                setCustomerType(e.target.value);
-              }}
-            >
-              <option value="shopper">Shopper</option>
-              <option value="investor">Investor </option>
-              <option value="business owner">Business Owner</option>
-            </select>
+            <label>
+              {" "}
+              And I am
+              <select
+                name="customerType"
+                id="customerType"
+                className="bg-white text-black border rounded-md py-4"
+                onChange={(e) => {
+                  setCustomerType(e.target.value);
+                }}
+              >
+                <option className="text-black" value="shopper">
+                  Shopper
+                </option>
+                <option className="text-black" value="investor">
+                  Investor{" "}
+                </option>
+                <option className="text-black" value="business owner">
+                  Business Owner
+                </option>
+              </select>
+            </label>
           </div>
           <p className="text-red font-bold"> {error}</p>
           <button
-            className="border p-4 ml-4 rounded-xl bg-black text-white"
+            className="border p-4 ml-4 rounded-xl bg-pink-600 text-white"
             onClick={handleClick}
           >
             Join the waiting list{" "}
           </button>
         </span>
       </div>
+      </section>
     );
   }
 };
