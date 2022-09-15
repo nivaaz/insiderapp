@@ -32,7 +32,7 @@ const Home = () => {
     res.then((r) => {
       setloomvideo({ __html: r });
     });
-  }, [getHtml]);
+  });
 
   return (
     <div>
@@ -55,7 +55,7 @@ const Home = () => {
           <nav className="w-full backdrop-blur-sm sticky top-0 z-50">
             <div className="md:max-w-5xl mx-auto flex justify-between">
               <div className="w-24 py-0 my-0">
-                <Image src={logo} />
+                <Image alt="Insider Logo" src={logo} />
               </div>
               <button
                 className="px-4 ml-4 rounded-xl bg-[#005EFF] text-white font-bold"
