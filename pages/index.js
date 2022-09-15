@@ -10,14 +10,12 @@ import JoinTheWaitList from "../components/join-the-waitlist";
 import mintingSite from "../assets/minting-page.png";
 import logo from "../assets/logo.svg";
 import { useEffect, useRef, useState } from "react";
-import BIRDS from "vanta/dist/vanta.birds.min";
 import { oembed } from "@loomhq/loom-embed";
 
 const getHtml = async () => {
   const res = await oembed(
     "https://www.loom.com/share/20530fa54b6a4bd09100472854f57bd2"
   );
-  console.log(res.html);
   return res.html;
 };
 
@@ -28,32 +26,13 @@ const Home = () => {
   const myRef = useRef(null);
   const scrollToEmailInput = () => myRef.current.scrollIntoView();
   const [loomvideo, setloomvideo] = useState();
-  // const [vantaEffect, setVantaEffect] = useState(0);
 
-  const heroRef = useRef(null);
   useEffect(() => {
     const res = getHtml();
     res.then((r) => {
       setloomvideo({ __html: r });
     });
   }, [getHtml]);
-  // useEffect(() => {
-  //   if (!vantaEffect) {
-  //     setVantaEffect(BIRDS({
-  //       el: myRef.current,
-  //       // mouseControls: true,
-  //       // touchControls: true,
-  //       // gyroControls: false,
-  //       // minHeight: 200.00,
-  //       // minWidth: 200.00,
-  //       // scale: 1.00,
-  //       // scaleMobile: 1.00
-  //     }))
-  //   }
-  //   return () => {
-  //     if (vantaEffect) vantaEffect.destroy()
-  //   }
-  // }, [vantaEffect])
 
   return (
     <div>
@@ -67,10 +46,9 @@ const Home = () => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400;1,700&display=swap"
           rel="stylesheet"
         />
-        <link src="three.r119.min.js" />
       </Head>
       <FirebaseContext.Provider value={app}>
         <main className="w-full p-0 font-para">
@@ -80,7 +58,7 @@ const Home = () => {
                 <Image src={logo} />
               </div>
               <button
-                className="px-4 ml-4 rounded-xl bg-[#DFCAE9] text-black"
+                className="px-4 ml-4 rounded-xl bg-[#005EFF] text-white font-bold"
                 onClick={scrollToEmailInput}
               >
                 Join the waitlist
@@ -88,7 +66,7 @@ const Home = () => {
             </div>
           </nav>
 
-          <section className="px-4" ref={heroRef} id="your-element-selector">
+          <section className="px-4" id="your-element-selector">
             <div className="md:max-w-5xl md:mx-auto flex h-screen flex pt-24 md:pt-0 text-white">
               <div className="grid md:grid-cols-2 my-auto">
                 <div className="m-auto">
@@ -97,14 +75,14 @@ const Home = () => {
                     most loyal customers
                   </h1>
                   <button
-                    className="p-4 bg-[#DFCAE9] rounded-lg text-black my-4"
+                    className="p-4 bg-[#005EFF] rounded-lg text-white font-bold my-4"
                     onClick={scrollToEmailInput}
                   >
                     {" "}
                     Join the waitlist{" "}
                   </button>
                 </div>
-                <div className="py-8">
+                <div className="py-8 css-transforms-demo el">
                   <Image alt="digital passes" src={passes} />
                 </div>
               </div>
@@ -112,9 +90,9 @@ const Home = () => {
           </section>
 
           <section className="text-black">
-            <div className="m-auto bg-[#DFCAE9] py-16 md:px-8 px-2 md:max-w-5xl md:mx-auto grid md:grid-cols-2 rounded-lg align-center">
+            <div className="m-auto bg-[#005EFF] py-16 md:px-8 px-2 md:max-w-5xl md:mx-auto grid md:grid-cols-2 rounded-lg align-center">
               <div className="my-auto">
-                <p className="text-2xl md:text-4xl font-para pt-4">
+                <p className="text-2xl md:text-4xl text-white font-para font-semibold pt-4">
                   Insider is the new and easy way to launch NFT loyalty programs
                   and maximise customer lifetime value.
                 </p>
@@ -129,10 +107,14 @@ const Home = () => {
           </section>
 
           <HowItWorks scrollToEmailInput={scrollToEmailInput} />
-          <section className="my-8 py-16 bg-[#DFCAE9]">
+          <section className="my-8 py-16 bg-[#005EFF]">
             <div className="flex flex-col justify-center align-center mx-auto max-w-5xl">
-              <h1 className="text-center text-black text-2xl pb-8"> See Insider in action</h1>
-              <MyComponent loomvideo={loomvideo} /> </div>
+              <h1 className="text-center text-black text-2xl pb-8">
+                {" "}
+                See Insider in action
+              </h1>
+              <MyComponent loomvideo={loomvideo} />{" "}
+            </div>
           </section>
           <WhyInsider />
           <ForCustomers />

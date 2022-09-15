@@ -20,7 +20,8 @@ a {
     color-scheme: dark;
   }
   body {
-    background:linear-gradient(180deg, #0C041F 0%, #DFCAE9 100%);
+    background: linear-gradient(180deg, #04081F 0%, #CACDE9 100%);
+    /* background-image: url("../assets/Vector2.svg"); */
     color: whitesmoke;
   }
 }

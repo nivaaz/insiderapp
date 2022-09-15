@@ -51,7 +51,7 @@ const WhyInsider = () => {
       <div className="flex py-16 md:py-0 px-2">
         <div className="flex flex-col md:flex-row text-black justify-center mx-auto">
           <p className="my-auto p-4"> Want to learn more? </p>
-          <button className="p-4 text-black bg-[#DFCAE9] rounded-lg">
+          <button className="p-4 text-white font-bold bg-[#005EFF] rounded-lg">
             {" "}
             Book a free consultation{" "}
           </button>

@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ["Raleway", "sans-serif"],
-        para: ["Poppins", "sans-serif"],
+        heading: ["Source Sans Pro", "sans-serif"],
+        para: ["Source Sans Pro", "sans-serif"],
       },
     },
   },

@@ -28,12 +28,12 @@ const JoinTheWaitList = (props) => {
     );
   } else {
     return (
-      <section className="bg-black text-white">
+      <section className="bg-white text-black">
         <div className="md:max-w-5xl mx-auto p-2 md:p-16 rounded-lg flex flex-col justify-center py-32 space-x-2 space-y-2">
           <p className="pb-8 mx-auto text-xl md:text-4xl">
             Be the first to know when we launch{" "}
             <FontAwesomeIcon
-              color="#eee"
+              color="#005EFF"
               icon={faRocket}
               size="2xs"
               className="md:pl-4 -mb-2"
@@ -81,7 +81,7 @@ const JoinTheWaitList = (props) => {
             </div>
             <p className="text-red font-bold"> {error}</p>
             <button
-              className="p-4 md:ml-4 rounded-xl bg-[#DFCAE9] text-black"
+              className="p-4 md:ml-4 rounded-xl bg-[#005EFF] text-white font-bold"
               onClick={handleClick}
             >
               Join the waiting list{" "}

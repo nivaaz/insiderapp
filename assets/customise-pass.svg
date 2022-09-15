@@ -81,15 +81,15 @@
 <stop offset="1"/>
 </linearGradient>
 <linearGradient id="paint4_linear_160_15" x1="333.5" y1="110.43" x2="333.5" y2="135.43" gradientUnits="userSpaceOnUse">
-<stop stop-color="#DFCAE9"/>
+<stop stop-color="#005EFF"/>
 <stop offset="1" stop-color="white"/>
 </linearGradient>
 <linearGradient id="paint5_linear_160_15" x1="358.863" y1="84.0137" x2="379.136" y2="101.846" gradientUnits="userSpaceOnUse">
-<stop stop-color="#DFCAE9"/>
+<stop stop-color="#005EFF"/>
 <stop offset="1" stop-color="white"/>
 </linearGradient>
 <linearGradient id="paint6_linear_160_15" x1="358.642" y1="141.378" x2="378.804" y2="159.336" gradientUnits="userSpaceOnUse">
-<stop stop-color="#DFCAE9"/>
+<stop stop-color="#005EFF"/>
 <stop offset="1" stop-color="white"/>
 </linearGradient>
 </defs>

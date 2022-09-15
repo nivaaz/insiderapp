@@ -10,22 +10,22 @@ const HowItWorks = (props) => {
       <div className="m-auto my-24"> 
       <p className="mx-auto text-white pb-4 text-center"> Launch a collection in 3 steps </p>
       <div className="flex flex-col md:flex-row"> 
-      <h2 className="text-4xl md:text-6xl font-heading  md:px-2 pb-8 font-medium mx-auto">
+      <h2 className="text-4xl md:text-7xl font-heading  md:px-2 pb-8 font-medium mx-auto">
         strategise.
       </h2>
-      <h2 className="text-4xl md:text-6xl font-heading  md:px-2 pb-8 font-medium mx-auto">
+      <h2 className="text-4xl md:text-7xl font-heading  md:px-2 pb-8 font-medium mx-auto">
          design.
       </h2>
-      <h2 className="text-4xl italic md:text-6xl font-heading  md:px-2 pb-8 font-medium mx-auto">
+      <h2 className="text-4xl italic md:text-7xl font-heading  md:px-2 pb-8 font-medium mx-auto">
          launch.
       </h2>
       </div>
       </div>
-      <div className="p-4 md:p-8 rounded-lg bg-white bg-opacity-10 my-2 grid md:grid-cols-2 shadow-lg">
+      <div className="p-4 md:p-8 rounded-lg bg-[#03041B] bg-opacity-70 my-2 grid md:grid-cols-2 shadow-lg">
         <div>
           <div className="flex">
-            <div className="p-4 rounded-full bg-black w-16 h-16 mb-4 shadow-md">
-              <p className="max-w-md pr text-3xl text-center pb-2 text-white">
+            <div className="p-4 rounded-full bg-white w-16 h-16 mb-4 shadow-md">
+              <p className="max-w-md text-3xl text-center pb-2 text-black font-bold">
                 1
               </p>
             </div>
@@ -33,7 +33,7 @@ const HowItWorks = (props) => {
           </div>
 
           <span>
-            <p className="max-w-md pr text-lg">
+            <p className="max-w-md text-lg">
               The Insider team works with your brand to onboard the team onto
               our platform and co-create a personalised brand membership
               strategy.
@@ -45,11 +45,11 @@ const HowItWorks = (props) => {
         </div>
       </div>
 
-      <div className="p-4 md:p-8 rounded-lg bg-white bg-opacity-10 my-2 grid md:grid-cols-2 shadow-lg ">
+      <div className="p-4 md:p-8 rounded-lg bg-[#03041B] bg-opacity-70 my-2 grid md:grid-cols-2 shadow-lg ">
         <div>
           <div className="flex">
-            <div className="p-4 rounded-full bg-black w-16 h-16 mb-4 shadow-md">
-              <p className="max-w-md pr text-3xl text-center pb-2 text-white">
+            <div className="p-4 rounded-full bg-white w-16 h-16 mb-4 shadow-md">
+              <p className="max-w-md text-3xl text-center pb-2 text-black font-bold">
                 {" "}
                 2{" "}
               </p>
@@ -58,7 +58,7 @@ const HowItWorks = (props) => {
           </div>
 
           <span>
-            <p className="max-w-md pr text-lg">
+            <p className="max-w-md text-lg">
               Design your digital passes using our questionnaire tool in
               minutes.
             </p>
@@ -70,22 +70,22 @@ const HowItWorks = (props) => {
         </div>
       </div>
 
-      <div className="p-4 md:p-8 rounded-lg bg-white bg-opacity-10 my-2 grid md:grid-cols-2 shadow-lg">
+      <div className="p-4 md:p-8 rounded-lg bg-[#03041B] bg-opacity-70 my-2 grid md:grid-cols-2 shadow-lg">
         <div>
           <div className="flex">
-            <div className="p-4 rounded-full bg-black w-16 h-16 mb-4 shadow-md ">
-              <p className="max-w-md pr text-3xl text-center pb-2 text-white">
+            <div className="p-4 rounded-full bg-white w-16 h-16 mb-4 shadow-md ">
+              <p className="max-w-md text-3xl text-center pb-2 text-black font-bold">
                 3
               </p>
             </div>
             <h3 className="my-auto text-2xl pb-3 pl-4"> Launch </h3>
           </div>
           <span>
-            <p className="max-w-md pr text-lg pb-4">
+            <p className="max-w-md text-lg pb-4">
               Insider provides you with a platform for customers to purchase
               your digital passes. Simply share the link.
             </p>
-            <button onClick={props.scrollToEmailInput} className="p-4 bg-[#DFCAE9] rounded-lg text-black">
+            <button onClick={props.scrollToEmailInput} className="p-4 bg-[#005EFF] rounded-lg text-white font-bold">
               Join the waitlist
             </button>
           </span>
