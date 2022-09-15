@@ -20,8 +20,8 @@ a {
     color-scheme: dark;
   }
   body {
-    background: #f4f3f4;
-    color: #040E2B;
+    background:linear-gradient(180deg, #0C041F 0%, #DFCAE9 100%);
+    color: whitesmoke;
   }
 }
 

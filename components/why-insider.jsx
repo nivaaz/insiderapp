@@ -1,96 +1,64 @@
-import { faGears, faLightbulb } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Image from "next/image";
+import graph from "../assets/graph.svg"
+import star from "../assets/star.svg"
+import user from "../assets/user.svg"
 
-const WhyInsider = ()=>{
-    const iconSize = "4x";
-    return (
-        <section className="md:py-32 space-y-16 bg-white px-4">
-            <div className="md:max-w-4xl md:mx-auto">
-              <h2 className="text-4xl font-heading py-10 font-bold">
-                Why choose Insider{" "}
-              </h2>
-              {/*  */}
-              <div className="flex md:flex-row flex-col">
-                <div className="flex flex-col md:pr-4 pt-4 w-full">
-                  <div className="w-1/5">
-                    <FontAwesomeIcon
-                      color="#06b6d4"
-                      icon={faLightbulb}
-                      size={iconSize}
-                    />
-                  </div>
-                  <p className="text-2xl font-medium mt-4">
-                    Deep expertise across consumer marketing
-                  </p>
-                  <div className="p-4 border border-gray-800 rounded-md mt-4">
-                    <div>
-                      <p className="pt-4 text-lg">
-                        With deep expertise across consumer marketing, product
-                        design and web3, we know that it is more expensive than
-                        ever for brands to acquire and retain customers.
-                      </p>
-                      <p className="pt-4 text-lg">
-                        The market is inundated with loyalty programs that are
-                        ineffective at retaining customers.
-                      </p>
-                      <div className="bg-gray-800 text-white p-4 rounded-md mt-4">
-                        <p className="pb-4 text-lg">
-                          By launching NFT-enabled loyalty programs through
-                          Insider, you can:
-                        </p>
-                        <ul className="text-lg">
-                          <li>
-                            - Generate new customers and appeal to emerging
-                            spenders (Millennials and Gen Z)
-                          </li>
-                          <li>
-                            - Generate additional revenue and secondary
-                            royalties
-                          </li>
-                          <li>- Identify and activate superfan communities</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/*  */}
-                <div className="flex flex-col pt-4 md:pl-4 w-full">
-                  <div className="w-1/5">
-                    <FontAwesomeIcon
-                      color="#06b6d4"
-                      icon={faGears}
-                      size={iconSize}
-                    />
-                  </div>
-                  <p className="text-2xl py-4 font-medium">
-                    Easy access with our no code tools and coaching
-                  </p>
-                  <div className="p-4 border border-gray-800 rounded-md flex h-full">
-                    <div>
-                      <p className="pt-4 text-lg">
-                        We know that brands, like yours, are interested in using
-                        this technology to stand out from competitors, but are
-                        wary of the risks.
-                      </p>
-                      <div className="bg-gray-800 text-white p-4 rounded-md mt-4">
-                        <p className="pb-4 text-lg">
-                          We provide holistic coaching for your teams to
-                          onboard, design and effortlessly launch your tokenised
-                          brand loyalty programs through our no-code platform.
-                        </p>
-                      </div>
-                      <p className="pt-4 text-lg">
-                        {" "}
-                        We also factor in requirements around compliance, IP and
-                        branding.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+const WhyInsider = () => {
+  const iconSize = "4x";
+  return (
+    <>
+      <section className="md:py-32 space-y-16 px-4">
+        <div className="md:max-w-5xl md:mx-auto">
+          <h2 className="text-4xl font-heading py-10 font-bold text-black">
+            Designed for brands
+          </h2>
+          {/*  */}
+          <div className="grid grid-cols-3 text-white">
+            {/*  */}
+            <div className="flex flex-col bg-gradient-to-b from-slate-800 to-black rounded-lg border p-8">
+              <div> <Image alt="" src={user}/> </div>
+              <h3 className="font-medium text-xl py-4"> New Customers </h3>
+              <p>
+                {" "}
+                Leveraging cutting edge technology means you will appeal to
+                emerging spenders like Millenials and GenZ.{" "}
+              </p>{" "}
             </div>
-          </section>
-    )
-}
+            {/*  */}
+            <div className="flex flex-col bg-gradient-to-b from-slate-800 to-black rounded-lg border p-8">
+              <div> <Image alt="" src={graph}/> </div>
+              <h3 className="font-medium text-xl py-4"> Grow Revenue </h3>
+              <p>
+                {" "}
+                Customers are rewarded the longer the hold the pass but if they
+                decide to sell, you can earn an additional sources of revenue
+                when customers purchase your digital passes.{" "}
+              </p>{" "}
+            </div>
+            {/*  */}
+            <div className="flex flex-col bg-gradient-to-b from-slate-800 to-black rounded-lg border p-8">
+              <div> <Image alt="" src={star}/> </div>
+              <h3 className="font-medium text-xl py-4"> Retain customers </h3>
+              <p>
+                {" "}
+                Digital passes let you clearly find superfans and rewards them
+                for their engagement - which is all built into the platform!
+              </p>{" "}
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="flex">
+        <div className="flex justify-center mx-auto">
+          <p className="my-auto p-4"> Want to learn more? </p>
+          <button className="p-4 text-black bg-[#DFCAE9] rounded-lg">
+            {" "}
+            Book a free consultation{" "}
+          </button>
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default WhyInsider
+export default WhyInsider;
