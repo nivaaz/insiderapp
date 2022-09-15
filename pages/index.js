@@ -8,17 +8,35 @@ import passes from "../assets/header-passes.svg";
 import Image from "next/image";
 import JoinTheWaitList from "../components/join-the-waitlist";
 import mintingSite from "../assets/minting-page.png";
-import perksProgram from "../assets/perks-program.png";
 import logo from "../assets/logo.svg";
 import { useEffect, useRef, useState } from "react";
-import BIRDS from 'vanta/dist/vanta.birds.min'
+import BIRDS from "vanta/dist/vanta.birds.min";
+import { oembed } from "@loomhq/loom-embed";
 
+const getHtml = async () => {
+  const res = await oembed(
+    "https://www.loom.com/share/20530fa54b6a4bd09100472854f57bd2"
+  );
+  console.log(res.html);
+  return res.html;
+};
+
+const MyComponent = (props) => {
+  return <div dangerouslySetInnerHTML={props.loomvideo} />;
+};
 const Home = () => {
   const myRef = useRef(null);
   const scrollToEmailInput = () => myRef.current.scrollIntoView();
+  const [loomvideo, setloomvideo] = useState();
   // const [vantaEffect, setVantaEffect] = useState(0);
-  const heroRef = useRef(null)
 
+  const heroRef = useRef(null);
+  useEffect(() => {
+    const res = getHtml();
+    res.then((r) => {
+      setloomvideo({ __html: r });
+    });
+  }, [getHtml]);
   // useEffect(() => {
   //   if (!vantaEffect) {
   //     setVantaEffect(BIRDS({
@@ -52,7 +70,7 @@ const Home = () => {
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
           rel="stylesheet"
         />
-        <link src="three.r119.min.js"/>
+        <link src="three.r119.min.js" />
       </Head>
       <FirebaseContext.Provider value={app}>
         <main className="w-full p-0 font-para">
@@ -69,7 +87,8 @@ const Home = () => {
               </button>
             </div>
           </nav>
-          <section className="px-4" ref = {heroRef} id="your-element-selector">
+
+          <section className="px-4" ref={heroRef} id="your-element-selector">
             <div className="md:max-w-5xl md:mx-auto flex h-screen flex pt-24 md:pt-0 text-white">
               <div className="grid md:grid-cols-2 my-auto">
                 <div className="m-auto">
@@ -110,14 +129,11 @@ const Home = () => {
           </section>
 
           <HowItWorks scrollToEmailInput={scrollToEmailInput} />
-          {/* <section className="my-8">
-            <div className="flex flex-col">
-              <h1 className="m-auto"> See Insider in action</h1>
-              <video controls className="m-auto">
-                <source src="https://www.loom.com/share/20530fa54b6a4bd09100472854f57bd2" />
-              </video>
-            </div>
-          </section> */}
+          <section className="my-8 py-16 bg-[#DFCAE9]">
+            <div className="flex flex-col justify-center align-center mx-auto max-w-5xl">
+              <h1 className="text-center text-black text-2xl pb-8"> See Insider in action</h1>
+              <MyComponent loomvideo={loomvideo} /> </div>
+          </section>
           <WhyInsider />
           <ForCustomers />
           <FirebaseContext.Consumer>
