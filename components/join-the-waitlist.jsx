@@ -29,20 +29,20 @@ const JoinTheWaitList = (props) => {
   } else {
     return (
       <section className="bg-black text-white">
-        <div className="md:max-w-5xl mx-auto p-2 md:p-16 rounded-lg flex flex-col justify-center py-32 space-x-2 space-y-2 ">
+        <div className="md:max-w-5xl mx-auto p-2 md:p-16 rounded-lg flex flex-col justify-center py-32 space-x-2 space-y-2">
           <p className="pb-8 mx-auto text-xl md:text-4xl">
             Be the first to know when we launch{" "}
             <FontAwesomeIcon
               color="#eee"
               icon={faRocket}
               size="2xs"
-              className="pl-4 -mb-2"
+              className="md:pl-4 -mb-2"
               bounce
             />
           </p>
-          <span ref={props.refProp} className="mx-auto flex flex-col space-y-8 align-center md:flex-row">
+          <span ref={props.refProp} className="mx-auto flex flex-col space-y-8  align-center md:flex-row justify-center">
             <div className="flex flex-col mt-auto">
-              <label className="px-1">
+              <label className="grid px-1">
                 My email is
                 <input
                   onChange={(e) => setEmail(e.target.value)}
@@ -56,7 +56,7 @@ const JoinTheWaitList = (props) => {
               </label>{" "}
             </div>
             <div className="flex flex-col mt-0">
-              <label className="px-1">
+              <label className="grid px-1">
                 {" "}
                 And I am
                 <select
@@ -81,7 +81,7 @@ const JoinTheWaitList = (props) => {
             </div>
             <p className="text-red font-bold"> {error}</p>
             <button
-              className="border p-4 ml-4 rounded-xl [#DFCAE9] text-white"
+              className="p-4 md:ml-4 rounded-xl bg-[#DFCAE9] text-black"
               onClick={handleClick}
             >
               Join the waiting list{" "}

@@ -9,11 +9,19 @@ const HowItWorks = (props) => {
 
       <div className="m-auto my-24"> 
       <p className="mx-auto text-white pb-4 text-center"> Launch a collection in 3 steps </p>
-      <h2 className="text-4xl md:text-6xl font-heading pb-8 font-medium mx-auto">
-        strategise. design. <b className="font-bold italic"> launch. </b>
+      <div className="flex flex-col md:flex-row"> 
+      <h2 className="text-4xl md:text-6xl font-heading  md:px-2 pb-8 font-medium mx-auto">
+        strategise.
+      </h2>
+      <h2 className="text-4xl md:text-6xl font-heading  md:px-2 pb-8 font-medium mx-auto">
+         design.
+      </h2>
+      <h2 className="text-4xl italic md:text-6xl font-heading  md:px-2 pb-8 font-medium mx-auto">
+         launch.
       </h2>
       </div>
-      <div className="p-4 md:p-8 rounded-lg bg-white bg-opacity-10 my-2 grid grid-cols-2 shadow-lg">
+      </div>
+      <div className="p-4 md:p-8 rounded-lg bg-white bg-opacity-10 my-2 grid md:grid-cols-2 shadow-lg">
         <div>
           <div className="flex">
             <div className="p-4 rounded-full bg-black w-16 h-16 mb-4 shadow-md">
@@ -32,12 +40,12 @@ const HowItWorks = (props) => {
             </p>
           </span>
         </div>
-        <div >
+        <div className="w-2/3 m-auto pt-4">
           <Image  alt="design digital pass" src={designPass}/>
         </div>
       </div>
 
-      <div className="p-4 md:p-8 rounded-lg bg-white bg-opacity-10 my-2 grid grid-cols-2 shadow-lg ">
+      <div className="p-4 md:p-8 rounded-lg bg-white bg-opacity-10 my-2 grid md:grid-cols-2 shadow-lg ">
         <div>
           <div className="flex">
             <div className="p-4 rounded-full bg-black w-16 h-16 mb-4 shadow-md">
@@ -57,12 +65,12 @@ const HowItWorks = (props) => {
           </span>
         </div>
 
-        <div >
+        <div className="w-3/5 m-auto pt-4">
           <Image  alt="design your NFT collection" src={designProgram}/>
         </div>
       </div>
 
-      <div className="p-4 md:p-8 rounded-lg bg-white bg-opacity-10 my-2 grid grid-cols-2 shadow-lg">
+      <div className="p-4 md:p-8 rounded-lg bg-white bg-opacity-10 my-2 grid md:grid-cols-2 shadow-lg">
         <div>
           <div className="flex">
             <div className="p-4 rounded-full bg-black w-16 h-16 mb-4 shadow-md ">
@@ -83,7 +91,7 @@ const HowItWorks = (props) => {
           </span>
         </div>
 
-        <div >
+        <div className="w-2/3 m-auto pt-4">
           <Image  alt="Collection shop page" src={launchCollection}/>
         </div>
       </div>

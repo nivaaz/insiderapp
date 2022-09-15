@@ -13,7 +13,7 @@ const WhyInsider = () => {
             Designed for brands
           </h2>
           {/*  */}
-          <div className="grid grid-cols-3 text-white">
+          <div className="grid md:grid-cols-3 space-y-4 md:space-y-0 md:space-x-2  text-white">
             {/*  */}
             <div className="flex flex-col bg-gradient-to-b from-slate-800 to-black rounded-lg border p-8">
               <div> <Image alt="" src={user}/> </div>
@@ -48,8 +48,8 @@ const WhyInsider = () => {
           </div>
         </div>
       </section>
-      <div className="flex">
-        <div className="flex justify-center mx-auto">
+      <div className="flex py-16 md:py-0 px-2">
+        <div className="flex flex-col md:flex-row text-black justify-center mx-auto">
           <p className="my-auto p-4"> Want to learn more? </p>
           <button className="p-4 text-black bg-[#DFCAE9] rounded-lg">
             {" "}

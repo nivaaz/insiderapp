@@ -7,16 +7,16 @@ const ForCustomers = () => {
   return (
     <>
      
-      <section className="md:py-32 space-y-16 px-4">
+      <section className="py-8 md:py-32 space-y-16 px-4">
         <div className="md:max-w-5xl md:mx-auto">
           <h2 className="text-4xl font-heading py-10 font-bold text-black">
             We keep the customers in mind
           </h2>
-          <div className="grid grid-cols-3 text-white">
+          <div className="grid md:grid-cols-3 space-y-4 md:space-y-0 md:space-x-2  text-white">
             {/*  */}
             <div className="flex flex-col bg-gradient-to-b to-[#1B030EE5] from-black rounded-lg border p-8">
               <div> <Image alt="" src={build}/> </div>
-              <h3 className="font-medium text-xl py-4"> Built with the brand </h3>
+              <h3 className="font-medium text-xl py-4"> Build with brands </h3>
               <p>
                 {" "}
                 Customers get to be apart of the process of your next launches

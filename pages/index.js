@@ -73,7 +73,7 @@ const Home = () => {
             <div className="md:max-w-5xl md:mx-auto flex h-screen flex pt-24 md:pt-0 text-white">
               <div className="grid md:grid-cols-2 my-auto">
                 <div className="m-auto">
-                  <h1 className="text-5xl font-heading font-heading font-bold">
+                  <h1 className="text-3xl md:text-5xl font-heading font-heading font-bold">
                     Maximise customer lifetime value and financially reward your
                     most loyal customers
                   </h1>
@@ -85,7 +85,7 @@ const Home = () => {
                     Join the waitlist{" "}
                   </button>
                 </div>
-                <div>
+                <div className="py-8">
                   <Image alt="digital passes" src={passes} />
                 </div>
               </div>
@@ -93,9 +93,9 @@ const Home = () => {
           </section>
 
           <section className="text-black">
-            <div className="bg-[#DFCAE9] py-16 md:px-8 px-2 md:max-w-5xl md:mx-auto grid grid-cols-2 rounded-lg align-center">
+            <div className="m-auto bg-[#DFCAE9] py-16 md:px-8 px-2 md:max-w-5xl md:mx-auto grid md:grid-cols-2 rounded-lg align-center">
               <div className="my-auto">
-                <p className="text-4xl font-para pt-4">
+                <p className="text-2xl md:text-4xl font-para pt-4">
                   Insider is the new and easy way to launch NFT loyalty programs
                   and maximise customer lifetime value.
                 </p>
@@ -110,14 +110,14 @@ const Home = () => {
           </section>
 
           <HowItWorks scrollToEmailInput={scrollToEmailInput} />
-          <section className="my-8">
+          {/* <section className="my-8">
             <div className="flex flex-col">
               <h1 className="m-auto"> See Insider in action</h1>
               <video controls className="m-auto">
                 <source src="https://www.loom.com/share/20530fa54b6a4bd09100472854f57bd2" />
               </video>
             </div>
-          </section>
+          </section> */}
           <WhyInsider />
           <ForCustomers />
           <FirebaseContext.Consumer>
