@@ -8,7 +8,7 @@ const HowItWorks = (props) => {
     <section className="md:max-w-5xl md:mx-auto flex flex-col py-16 p-8 px-4">
 
       <div className="m-auto my-24"> 
-      <p className="mx-auto text-white pb-4 text-center"> Launch a collection in 3 steps </p>
+      <p className="mx-auto text-primary pb-4 text-center"> Launch a program in 3 steps </p>
       <div className="flex flex-col md:flex-row"> 
       <h2 className="text-4xl md:text-7xl font-heading  md:px-2 pb-8 font-medium mx-auto">
         strategise.
@@ -25,11 +25,11 @@ const HowItWorks = (props) => {
         <div>
           <div className="flex">
             <div className="p-4 rounded-full bg-black w-16 h-16 mb-4 shadow-md">
-              <p className="max-w-md text-3xl text-center pb-2 text-white font-bold">
+              <p className="max-w-md text-3xl text-center pb-2 text-primary font-bold">
                 1
               </p>
             </div>
-            <h3 className="my-auto text-2xl pb-3 pl-4"> Strategise </h3>
+            <h3 className="my-auto text-2xl pb-3 pl-4 font-semibold"> Strategise </h3>
           </div>
 
           <span>
@@ -49,12 +49,12 @@ const HowItWorks = (props) => {
         <div>
           <div className="flex">
             <div className="p-4 rounded-full bg-black w-16 h-16 mb-4 shadow-md">
-              <p className="max-w-md text-3xl text-center pb-2 text-white font-bold">
+              <p className="max-w-md text-3xl text-center pb-2 text-primary font-bold">
                 {" "}
                 2{" "}
               </p>
             </div>
-            <h3 className="my-auto text-2xl pb-3 pl-4"> Design </h3>
+            <h3 className="my-auto text-2xl pb-3 pl-4 font-semibold"> Design </h3>
           </div>
 
           <span>
@@ -74,18 +74,18 @@ const HowItWorks = (props) => {
         <div>
           <div className="flex">
             <div className="p-4 rounded-full bg-black w-16 h-16 mb-4 shadow-md ">
-              <p className="max-w-md text-3xl text-center pb-2 text-white font-bold">
+              <p className="max-w-md text-3xl text-center pb-2 text-primary font-bold">
                 3
               </p>
             </div>
-            <h3 className="my-auto text-2xl pb-3 pl-4"> Launch </h3>
+            <h3 className="my-auto text-2xl pb-3 pl-4 font-semibold"> Launch </h3>
           </div>
           <span>
             <p className="max-w-md text-lg pb-4">
               Insider provides you with a platform for customers to purchase
               your digital passes. Simply share the link.
             </p>
-            <button onClick={props.scrollToEmailInput} className="p-4 bg-primary rounded-lg text-black font-bold">
+            <button onClick={props.scrollToEmailInput} className="p-4 bg-black rounded-lg text-primary font-bold">
               Join the waitlist
             </button>
           </span>

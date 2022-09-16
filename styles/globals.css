@@ -20,8 +20,8 @@ a {
     color-scheme: dark;
   }
   body {
-    /* background-color: #CACDE9; */
     background-image: url("../assets/Vector2.svg");
+    background-size: cover;
   }
 }
 

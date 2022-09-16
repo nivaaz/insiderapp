@@ -54,8 +54,8 @@ const Home = () => {
         <main className="w-full p-0 font-para bg-gradient-to-b from-primary to-#[04081F] ">
           <nav className="w-full backdrop-blur-sm sticky top-0 z-50">
             <div className="md:max-w-5xl mx-auto flex justify-between">
-              <div className="w-24 py-0 my-0">
-                <Image alt="Insider Logo" src={logo} className="bg-slate-800 bg-opacity-50 rounded-full"/>
+              <div className="w-28 py-0 my-0">
+                <Image alt="Insider Logo" src={logo}/>
               </div>
               <button
                 className="px-4 ml-4 rounded-xl bg-black text-primary font-bold"
@@ -75,7 +75,7 @@ const Home = () => {
                     most loyal customers
                   </h1>
                   <button
-                    className="p-4 bg-primary rounded-lg text-black font-bold my-4 shadow-md"
+                    className="p-4 text-primary rounded-lg bg-black font-bold my-4 shadow-md"
                     onClick={scrollToEmailInput}
                   >
                     {" "}
@@ -93,8 +93,7 @@ const Home = () => {
             <div className="m-auto bg-primary py-16 md:px-8 px-2 md:max-w-5xl md:mx-auto grid md:grid-cols-2 rounded-lg align-center">
               <div className="my-auto">
                 <p className="text-2xl md:text-4xl text-black font-para font-semibold pt-4">
-                  Insider is the new and easy way to launch NFT loyalty programs
-                  and maximise customer lifetime value.
+                Insider offers powerful no-code tools to easily design and launch digital membership passes for your brand. <br/> These unlock monetary incentives for customers and strengthens their loyalty.
                 </p>
               </div>
               <div className="flex justify-center">
@@ -107,17 +106,20 @@ const Home = () => {
           </section>
 
           <HowItWorks scrollToEmailInput={scrollToEmailInput} />
+          <div className="bg-gradient-to-t from-slate-900 w-full"> 
           <section className="my-8 py-16 bg-primary">
             <div className="flex flex-col justify-center align-center mx-auto max-w-5xl">
-              <h1 className="text-center text-black text-2xl pb-8">
+              <h1 className="font-medium text-center text-black text-5xl pb-8">
                 {" "}
                 See Insider in action
               </h1>
               <MyComponent loomvideo={loomvideo} />{" "}
             </div>
           </section>
+         
           <WhyInsider />
           <ForCustomers />
+          </div>
           <FirebaseContext.Consumer>
             {() => (
               <>

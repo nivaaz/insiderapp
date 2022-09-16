@@ -6,7 +6,6 @@ import crown from "../assets/crown.svg"
 const ForCustomers = () => {
   return (
     <>
-     
       <section className="py-8 md:py-32 space-y-16 px-4">
         <div className="md:max-w-5xl md:mx-auto">
           <h2 className="text-4xl font-heading py-10 font-bold text-white">
@@ -18,9 +17,7 @@ const ForCustomers = () => {
               <div> <Image alt="" src={build}/> </div>
               <h3 className="font-medium text-xl py-4"> Build with brands </h3>
               <p>
-                {" "}
-                Customers get to be apart of the process of your next launches
-                and give feedback on previous ones.
+                Customers can be a part of your product development process and are incentivised to provide feedback.
               </p>{" "}
             </div>
             {/*  */}
@@ -28,7 +25,6 @@ const ForCustomers = () => {
               <div> <Image alt="" src={crown}/> </div>
               <h3 className="font-medium text-xl py-4"> Earn while engaging </h3>
               <p>
-                {" "}
                 Customers earn rewards on their digital passes through
                 engagement, unlock more incentives, and can resell their passes
                 at any point.
@@ -39,10 +35,7 @@ const ForCustomers = () => {
               <div> <Image alt="" src={chat}/> </div>
               <h3 className="font-medium text-xl py-4"> Community </h3>
               <p>
-                {" "}
-                Customers can connect with like-minded superfans of your brand
-                in your exclusive community wherre they can share advice and
-                learn.
+                Customers can connect in topics dedicated to sharing advice, reviews and creating content. Create cult communities around your brand, at scale.
               </p>{" "}
             </div>
           </div>

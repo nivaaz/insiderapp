@@ -15,7 +15,7 @@ const WhyInsider = () => {
           {/*  */}
           <div className="grid md:grid-cols-3 space-y-4 md:space-y-0 md:space-x-2  text-white">
             {/*  */}
-            <div className="flex flex-col bg-gradient-to-b from-slate-800 to-black rounded-lg border p-8">
+            <div className="flex flex-col bg-gradient-to-b from-[#000627] to-black rounded-lg border p-8">
               <div> <Image alt="" src={user}/> </div>
               <h3 className="font-medium text-xl py-4"> New Customers </h3>
               <p>
@@ -25,24 +25,21 @@ const WhyInsider = () => {
               </p>{" "}
             </div>
             {/*  */}
-            <div className="flex flex-col bg-gradient-to-b from-slate-800 to-black rounded-lg border p-8">
+            <div className="flex flex-col bg-gradient-to-b from-[#000627] to-black rounded-lg border p-8">
               <div> <Image alt="" src={graph}/> </div>
               <h3 className="font-medium text-xl py-4"> Grow Revenue </h3>
               <p>
                 {" "}
-                Customers are rewarded the longer the hold the pass but if they
-                decide to sell, you can earn an additional sources of revenue
-                when customers purchase your digital passes.{" "}
+                Customers are rewarded the longer they hold the pass and how involved they are with your brand. If they decide to sell the digital pass, you can earn secondary royalties on each pass that is resold.
               </p>{" "}
             </div>
             {/*  */}
-            <div className="flex flex-col bg-gradient-to-b from-slate-800 to-black rounded-lg border p-8">
+            <div className="flex flex-col bg-gradient-to-b from-[#000627] to-black rounded-lg border p-8">
               <div> <Image alt="" src={star}/> </div>
               <h3 className="font-medium text-xl py-4"> Retain customers </h3>
               <p>
                 {" "}
-                Digital passes let you clearly find superfans and rewards them
-                for their engagement - which is all built into the platform!
+                Digital passes let you clearly find superfans and reward them for their engagement - which is all built into the platform!
               </p>{" "}
             </div>
           </div>
