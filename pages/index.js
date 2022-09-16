@@ -1,4 +1,5 @@
 import logo from "../assets/logoimage.svg";
+import log1o from "../assets/small-bg.svg";
 import Head from "next/head";
 import { FirebaseContext } from "../components/firebaseProvider";
 import { app } from "../components/firebase";
@@ -11,6 +12,7 @@ import JoinTheWaitList from "../components/join-the-waitlist";
 import mintingSite from "../assets/minting-page.png";
 import { useEffect, useRef, useState } from "react";
 import { oembed } from "@loomhq/loom-embed";
+import anime from "animejs";
 
 const getHtml = async () => {
   const res = await oembed(
@@ -22,6 +24,7 @@ const getHtml = async () => {
 const MyComponent = (props) => {
   return <div dangerouslySetInnerHTML={props.loomvideo} />;
 };
+
 const Home = () => {
   const myRef = useRef(null);
   const scrollToEmailInput = () => myRef.current.scrollIntoView();
@@ -32,6 +35,29 @@ const Home = () => {
     res.then((r) => {
       setloomvideo({ __html: r });
     });
+    var animation = anime({
+      targets: '#smallbg',
+      // translateX: {
+      //   value: 250,
+      //   duration: 1600
+      // },
+      rotate: {
+        value: 360,
+        duration: 3600,
+        easing: 'easeInOutSine'
+      },
+      scale: {
+        value: 2,
+        duration: 3200,
+        delay: 800,
+        easing: 'easeInOutQuart'
+      },
+      direction: 'alternate',
+      loop: true,
+      autoplay: true,
+      delay: 250 // All properties except 'scale' inherit 250ms delay
+    });
+    animation.play();
   });
 
   return (
@@ -52,6 +78,7 @@ const Home = () => {
       </Head>
       <FirebaseContext.Provider value={app}>
         <main className="w-full p-0 font-para bg-primary bg-gradient-to-b from-primary bg-[url('../assets/Vector2.svg')] bg-cover">
+          <div className="absolute" id="smallbg">   <Image className="relative m-10" alt="Insider Logo" src={log1o} /> </div>
           <nav className="w-full bg-white sticky top-0 z-50">
             <div className="md:max-w-5xl mx-auto flex justify-between">
               <div className="w-28 py-0 my-0 px-2">

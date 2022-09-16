@@ -9,12 +9,12 @@
 <filter id="filter0_f_197_18" x="-169" y="-262.959" width="1839" height="6674.97" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_197_18"/>
+<feGaussianBlur stdDeviation="75" result="effect1_foregroundBlur_197_18"/>
 </filter>
 <filter id="filter1_f_197_18" x="-169" y="-263.009" width="1839" height="6674.97" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_197_18"/>
+<feGaussianBlur stdDeviation="75" result="effect1_foregroundBlur_197_18"/>
 </filter>
 </defs>
 </svg>

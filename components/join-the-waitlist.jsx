@@ -14,7 +14,9 @@ const JoinTheWaitList = (props) => {
 
   const handleClick = () => {
     textInput.current.focus();
-    setEmail(textInput.current.value);
+    textInput.current.click();
+    setEmail(textInput.current?.value);
+
     if (email && customerType) {
       addEmailToWaitlist(app, email, customerType);
       setIsSubmitted(true);
@@ -35,6 +37,7 @@ const JoinTheWaitList = (props) => {
         <div className="md:max-w-5xl mx-auto p-2 md:p-16 rounded-lg flex flex-col justify-center py-32 space-x-2 space-y-2">
           <p className="pb-8 mx-auto text-xl md:text-4xl">
             Be the first to know when we launch{" "}
+            {email}
             <FontAwesomeIcon
               color="#CACDE9"
               icon={faRocket}
