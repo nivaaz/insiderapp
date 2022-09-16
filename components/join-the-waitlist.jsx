@@ -17,7 +17,7 @@ const JoinTheWaitList = (props) => {
     textInput.current.click();
     setEmail(textInput.current?.value);
 
-    if (email && customerType) {
+    if ((email || textInput.current?.value) && customerType) {
       addEmailToWaitlist(app, email, customerType);
       setIsSubmitted(true);
       setError();
