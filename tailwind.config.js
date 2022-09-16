@@ -10,6 +10,9 @@ module.exports = {
         heading: ["Source Sans Pro", "sans-serif"],
         para: ["Source Sans Pro", "sans-serif"],
       },
+      colors:{
+        primary: '#CACDE9'
+      }
     },
   },
   plugins: [],

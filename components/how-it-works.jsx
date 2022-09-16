@@ -21,11 +21,11 @@ const HowItWorks = (props) => {
       </h2>
       </div>
       </div>
-      <div className="p-4 md:p-8 rounded-lg bg-[#03041B] bg-opacity-70 my-2 grid md:grid-cols-2 shadow-lg">
+      <div className="p-4 md:p-8 rounded-lg bg-primary bg-opacity-70 text-black my-2 grid md:grid-cols-2 shadow-lg">
         <div>
           <div className="flex">
-            <div className="p-4 rounded-full bg-white w-16 h-16 mb-4 shadow-md">
-              <p className="max-w-md text-3xl text-center pb-2 text-black font-bold">
+            <div className="p-4 rounded-full bg-black w-16 h-16 mb-4 shadow-md">
+              <p className="max-w-md text-3xl text-center pb-2 text-white font-bold">
                 1
               </p>
             </div>
@@ -45,11 +45,11 @@ const HowItWorks = (props) => {
         </div>
       </div>
 
-      <div className="p-4 md:p-8 rounded-lg bg-[#03041B] bg-opacity-70 my-2 grid md:grid-cols-2 shadow-lg ">
+      <div className="p-4 md:p-8 rounded-lg bg-primary bg-opacity-70 text-black my-2 grid md:grid-cols-2 shadow-lg ">
         <div>
           <div className="flex">
-            <div className="p-4 rounded-full bg-white w-16 h-16 mb-4 shadow-md">
-              <p className="max-w-md text-3xl text-center pb-2 text-black font-bold">
+            <div className="p-4 rounded-full bg-black w-16 h-16 mb-4 shadow-md">
+              <p className="max-w-md text-3xl text-center pb-2 text-white font-bold">
                 {" "}
                 2{" "}
               </p>
@@ -70,11 +70,11 @@ const HowItWorks = (props) => {
         </div>
       </div>
 
-      <div className="p-4 md:p-8 rounded-lg bg-[#03041B] bg-opacity-70 my-2 grid md:grid-cols-2 shadow-lg">
+      <div className="p-4 md:p-8 rounded-lg bg-primary bg-opacity-70 text-black my-2 grid md:grid-cols-2 shadow-lg">
         <div>
           <div className="flex">
-            <div className="p-4 rounded-full bg-white w-16 h-16 mb-4 shadow-md ">
-              <p className="max-w-md text-3xl text-center pb-2 text-black font-bold">
+            <div className="p-4 rounded-full bg-black w-16 h-16 mb-4 shadow-md ">
+              <p className="max-w-md text-3xl text-center pb-2 text-white font-bold">
                 3
               </p>
             </div>
@@ -85,7 +85,7 @@ const HowItWorks = (props) => {
               Insider provides you with a platform for customers to purchase
               your digital passes. Simply share the link.
             </p>
-            <button onClick={props.scrollToEmailInput} className="p-4 bg-[#CACDE9] rounded-lg text-black font-bold">
+            <button onClick={props.scrollToEmailInput} className="p-4 bg-primary rounded-lg text-black font-bold">
               Join the waitlist
             </button>
           </span>

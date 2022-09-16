@@ -50,8 +50,8 @@ const WhyInsider = () => {
       </section>
       <div className="flex py-16 md:py-0 px-2">
         <div className="flex flex-col md:flex-row text-white justify-center mx-auto">
-          <p className="my-auto p-4"> Want to learn more? </p>
-          <button className="p-4 text-black font-bold bg-[#CACDE9] rounded-lg">
+          <p className="my-auto p-4 text-xl"> Want to learn more? </p>
+          <button className="p-4 text-black font-bold bg-primary rounded-lg">
             {" "}
             Book a free consultation{" "}
           </button>

@@ -51,14 +51,14 @@ const Home = () => {
         />
       </Head>
       <FirebaseContext.Provider value={app}>
-        <main className="w-full p-0 font-para">
+        <main className="w-full p-0 font-para bg-gradient-to-b from-primary to-#[04081F] ">
           <nav className="w-full backdrop-blur-sm sticky top-0 z-50">
             <div className="md:max-w-5xl mx-auto flex justify-between">
               <div className="w-24 py-0 my-0">
-                <Image alt="Insider Logo" src={logo} />
+                <Image alt="Insider Logo" src={logo} className="bg-slate-800 bg-opacity-50 rounded-full"/>
               </div>
               <button
-                className="px-4 ml-4 rounded-xl bg-[#CACDE9] text-black font-bold"
+                className="px-4 ml-4 rounded-xl bg-black text-primary font-bold"
                 onClick={scrollToEmailInput}
               >
                 Join the waitlist
@@ -75,7 +75,7 @@ const Home = () => {
                     most loyal customers
                   </h1>
                   <button
-                    className="p-4 bg-[#CACDE9] rounded-lg text-black font-bold my-4 shadow-md"
+                    className="p-4 bg-primary rounded-lg text-black font-bold my-4 shadow-md"
                     onClick={scrollToEmailInput}
                   >
                     {" "}
@@ -90,7 +90,7 @@ const Home = () => {
           </section>
 
           <section className="text-black">
-            <div className="m-auto bg-[#CACDE9] py-16 md:px-8 px-2 md:max-w-5xl md:mx-auto grid md:grid-cols-2 rounded-lg align-center">
+            <div className="m-auto bg-primary py-16 md:px-8 px-2 md:max-w-5xl md:mx-auto grid md:grid-cols-2 rounded-lg align-center">
               <div className="my-auto">
                 <p className="text-2xl md:text-4xl text-black font-para font-semibold pt-4">
                   Insider is the new and easy way to launch NFT loyalty programs
@@ -107,7 +107,7 @@ const Home = () => {
           </section>
 
           <HowItWorks scrollToEmailInput={scrollToEmailInput} />
-          <section className="my-8 py-16 bg-[#CACDE9]">
+          <section className="my-8 py-16 bg-primary">
             <div className="flex flex-col justify-center align-center mx-auto max-w-5xl">
               <h1 className="text-center text-black text-2xl pb-8">
                 {" "}
