@@ -13,13 +13,17 @@ const JoinTheWaitList = (props) => {
   const textInput = useRef(null);
 
   const handleClick = () => {
-    // textInput.current.focus();
-    // textInput.current.click();
     setEmail(textInput.current?.value);
     console.log((email || textInput.current?.value),textInput.current?.value);
 
     if ((email || textInput.current?.value) && customerType) {
-      addEmailToWaitlist(app, email, customerType);
+      try{
+        addEmailToWaitlist(app, email, customerType);
+      } catch(e){
+      setError("Something went wrong, try again later");
+
+      }
+      
       setIsSubmitted(true);
       setError();
     } else {
