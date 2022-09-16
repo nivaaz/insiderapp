@@ -36,15 +36,24 @@ const Home = () => {
       setloomvideo({ __html: r });
     });
     var animation = anime({
-      targets: '#smallbg',
-      // scale: 2,
-      rotate: '1turn',
-      direction: 'alternate',
-      loop: true,
-      autoplay: true,
-      duration:500,
+      targets: '.el.relative-values',
+      translateX: {
+        value: '*=2.5', // 100px * 2.5 = '250px'
+        duration: 1000
+      },
+      width: {
+        value: '-=20px', // 28 - 20 = '8px'
+        duration: 1800,
+        easing: 'easeInOutSine'
+      },
+      rotate: {
+        value: '+=2turn', // 0 + 2 = '2turn'
+        duration: 1800,
+        easing: 'easeInOutSine'
+      },
+      direction: 'alternate'
     });
-    animation.play();
+    animation.play()
   });
 
   return (
@@ -65,14 +74,14 @@ const Home = () => {
       </Head>
       <FirebaseContext.Provider value={app}>
         <main className="w-full p-0 font-para bg-primary bg-gradient-to-b from-primary bg-[url('../assets/Vector2.svg')] bg-cover">
-          <div className="absolute"  id="smallbg">   <Image className="relative m-10" alt="Insider Logo" src={log1o} /> </div>
+          <div className="absolute z-1"  id="smallbg">   <Image className="relative m-10" alt="Insider Logo" src={log1o} /> </div>
           <nav className="w-full bg-white sticky top-0 z-50">
             <div className="md:max-w-5xl mx-auto flex justify-between">
-              <div className="w-28 py-0 my-0 px-2">
+              <div className="w-28 py-0 my-0 px-2 pt-2">
                 <Image alt="Insider Logo" src={logo} />
               </div>
               <button
-                className="px-4 ml-4 rounded-xl bg-black text-primary font-bold h-min py-2 my-auto mr-2"
+                className="px-4 ml-4 rounded-xl bg-black text-primary font-bold h-min py-2 my-auto mr-2 cursor-pointer"
                 onClick={scrollToEmailInput}
               >
                 Join the waitlist

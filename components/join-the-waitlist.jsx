@@ -13,9 +13,10 @@ const JoinTheWaitList = (props) => {
   const textInput = useRef(null);
 
   const handleClick = () => {
-    textInput.current.focus();
-    textInput.current.click();
+    // textInput.current.focus();
+    // textInput.current.click();
     setEmail(textInput.current?.value);
+    console.log((email || textInput.current?.value),textInput.current?.value);
 
     if ((email || textInput.current?.value) && customerType) {
       addEmailToWaitlist(app, email, customerType);
@@ -91,7 +92,6 @@ const JoinTheWaitList = (props) => {
             </div>
             <p className="text-red font-bold"> {error}</p>
             <button
-              // disabled={disableSubmitButton}
               className="p-4 md:ml-4 rounded-xl bg-primary text-black font-bold"
               onClick={handleClick}
             >
