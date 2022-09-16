@@ -1,17 +1,20 @@
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { FirebaseContext } from "./firebaseProvider";
 import { addEmailToWaitlist } from "../components/firebase";
 
 const JoinTheWaitList = (props) => {
   const [email, setEmail] = useState();
-  const [customerType, setCustomerType] = useState('Shopper');
+  const [customerType, setCustomerType] = useState("Shopper");
   const [error, setError] = useState();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { app } = useContext(FirebaseContext);
+  const textInput = useRef(null);
 
   const handleClick = () => {
+    textInput.current.focus();
+    setEmail(textInput.current.value);
     if (email && customerType) {
       addEmailToWaitlist(app, email, customerType);
       setIsSubmitted(true);
@@ -40,7 +43,10 @@ const JoinTheWaitList = (props) => {
               bounce
             />
           </p>
-          <span ref={props.refProp} className="mx-auto flex flex-col space-y-8  align-center md:flex-row justify-center">
+          <span
+            ref={props.refProp}
+            className="mx-auto flex flex-col space-y-8  align-center md:flex-row justify-center"
+          >
             <div className="flex flex-col mt-auto">
               <label className="grid px-1">
                 My email is
@@ -48,11 +54,11 @@ const JoinTheWaitList = (props) => {
                   onChange={(e) => setEmail(e.target.value)}
                   className="bg-white rounded-lg p-4 text-black px-1"
                   placeholder="ada@lovelace.com"
-                  type="text"
-                  // id="email"
+                  type="email"
+                  id="email"
                   size="25"
-                  autoComplete={false}
                   required
+                  ref={textInput}
                 />
               </label>{" "}
             </div>
@@ -82,6 +88,7 @@ const JoinTheWaitList = (props) => {
             </div>
             <p className="text-red font-bold"> {error}</p>
             <button
+              // disabled={disableSubmitButton}
               className="p-4 md:ml-4 rounded-xl bg-primary text-black font-bold"
               onClick={handleClick}
             >
