@@ -22,7 +22,7 @@ const JoinTheWaitList = (props) => {
   };
   if (isSubmitted) {
     return (
-      <div className="w-full text-center">
+      <div className="w-full text-center text-black text-xl">
         <p> We have your email, thank you!</p>
       </div>
     );

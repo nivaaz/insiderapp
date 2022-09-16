@@ -1,10 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import graph from "../assets/graph.svg"
 import star from "../assets/star.svg"
 import user from "../assets/user.svg"
 
 const WhyInsider = () => {
-  const iconSize = "4x";
   return (
     <>
       <section className="md:py-32 space-y-16 px-4">
@@ -48,10 +48,10 @@ const WhyInsider = () => {
       <div className="flex py-16 md:py-0 px-2">
         <div className="flex flex-col md:flex-row text-white justify-center mx-auto">
           <p className="my-auto p-4 text-xl"> Want to learn more? </p>
-          <button className="p-4 text-black font-bold bg-primary rounded-lg">
-            {" "}
-            Book a free consultation{" "}
-          </button>
+          <Link href="https://calendly.com/nivaaz">  
+           <p  className="p-4 text-black font-bold bg-primary rounded-lg cursor-pointer">  Book a free consultation</p></Link> 
+           
+         
         </div>
       </div>
     </>
