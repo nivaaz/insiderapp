@@ -14,16 +14,12 @@ const JoinTheWaitList = (props) => {
 
   const handleClick = () => {
     setEmail(textInput.current?.value);
-    console.log((email || textInput.current?.value),textInput.current?.value);
-
     if ((email || textInput.current?.value) && customerType) {
-      try{
+      try {
         addEmailToWaitlist(app, email, customerType);
-      } catch(e){
-      setError("Something went wrong, try again later");
-
+      } catch (e) {
+        setError("Something went wrong, try again later");
       }
-      
       setIsSubmitted(true);
       setError();
     } else {
@@ -41,8 +37,7 @@ const JoinTheWaitList = (props) => {
       <section className="bg-white text-black">
         <div className="md:max-w-5xl mx-auto p-2 md:p-16 rounded-lg flex flex-col justify-center py-32 space-x-2 space-y-2">
           <p className="pb-8 mx-auto text-xl md:text-4xl">
-            Be the first to know when we launch{" "}
-            {email}
+            Be the first to know when we launch
             <FontAwesomeIcon
               color="#CACDE9"
               icon={faRocket}
