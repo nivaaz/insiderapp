@@ -20,11 +20,9 @@ a {
     color-scheme: dark;
   }
   body {
-    background: #04081F;
-    background: linear-gradient(to bottom right, rgba(4, 8, 31, 1), rgba(202, 205, 233, 1)
-    ); 
+    background-color: #CACDE9;
+    background:linear-gradient(to bottom, #CACDE9 0%, #04081F 100%);
     /* background-image: url("../assets/Vector2.svg"); */
-    color: whitesmoke;
   }
 }
 
