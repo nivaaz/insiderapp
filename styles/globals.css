@@ -20,8 +20,6 @@ a {
     color-scheme: dark;
   }
   body {
-    background-color: #cacde9;
-    /* background-image: linear-gradient(162deg, #cacde9 0%, #3d4573 50%, #04081f 100%) ;     */
     background-image: url("../assets/Vector2.svg");
     background-size: cover;
   }
