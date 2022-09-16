@@ -48,9 +48,10 @@ const JoinTheWaitList = (props) => {
                   onChange={(e) => setEmail(e.target.value)}
                   className="bg-white rounded-lg p-4 text-black px-1"
                   placeholder="ada@lovelace.com"
-                  type="email"
-                  id="email"
+                  type="text"
+                  // id="email"
                   size="25"
+                  autoComplete={false}
                   required
                 />
               </label>{" "}

@@ -35,7 +35,7 @@ const ForCustomers = () => {
               <div> <Image alt="" src={chat}/> </div>
               <h3 className="font-medium text-xl py-4"> Community </h3>
               <p>
-                Customers can connect in topics dedicated to sharing advice, reviews and creating content. Create cult communities around your brand, at scale.
+                Customers can connect on topics dedicated to sharing advice, reviews and creating content. Create cult communities around your brand, at scale.
               </p>{" "}
             </div>
           </div>
