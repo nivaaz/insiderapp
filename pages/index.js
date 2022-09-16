@@ -1,3 +1,4 @@
+import logo from "../assets/logoimage.svg";
 import Head from "next/head";
 import { FirebaseContext } from "../components/firebaseProvider";
 import { app } from "../components/firebase";
@@ -8,7 +9,6 @@ import passes from "../assets/header-passes.svg";
 import Image from "next/image";
 import JoinTheWaitList from "../components/join-the-waitlist";
 import mintingSite from "../assets/minting-page.png";
-import logo from "../assets/logo.svg";
 import { useEffect, useRef, useState } from "react";
 import { oembed } from "@loomhq/loom-embed";
 
