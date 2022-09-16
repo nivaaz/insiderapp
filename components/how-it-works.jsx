@@ -5,7 +5,7 @@ import launchCollection from "../assets/minting-page.png"
 
 const HowItWorks = (props) => {
   return (
-    <section className="md:max-w-5xl md:mx-auto flex flex-col py-16 p-8 px-4">
+    <section className="md:max-w-5xl md:mx-auto flex flex-col py-16 p-8 px-4 bg-[url('../assets/Vector2.svg')] ">
 
       <div className="m-auto my-24"> 
       <p className="mx-auto text-slate-800 pb-4 text-center"> Launch a program in 3 steps </p>

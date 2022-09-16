@@ -51,7 +51,7 @@ const Home = () => {
         />
       </Head>
       <FirebaseContext.Provider value={app}>
-        <main className="w-full p-0 font-para bg-gradient-to-b from-primary">
+        <main className="w-full p-0 font-para bg-primary bg-gradient-to-b from-primary">
           <nav className="w-full bg-white sticky top-0 z-50">
             <div className="md:max-w-5xl mx-auto flex justify-between">
               <div className="w-28 py-0 my-0 px-2">
