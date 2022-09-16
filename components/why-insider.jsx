@@ -9,7 +9,7 @@ const WhyInsider = () => {
     <>
       <section className="md:py-32 space-y-16 px-4">
         <div className="md:max-w-5xl md:mx-auto">
-          <h2 className="text-4xl font-heading py-10 font-bold text-black">
+          <h2 className="text-4xl font-heading py-10 font-bold text-white">
             Designed for brands
           </h2>
           {/*  */}
@@ -49,9 +49,9 @@ const WhyInsider = () => {
         </div>
       </section>
       <div className="flex py-16 md:py-0 px-2">
-        <div className="flex flex-col md:flex-row text-black justify-center mx-auto">
+        <div className="flex flex-col md:flex-row text-white justify-center mx-auto">
           <p className="my-auto p-4"> Want to learn more? </p>
-          <button className="p-4 text-white font-bold bg-[#005EFF] rounded-lg">
+          <button className="p-4 text-black font-bold bg-[#CACDE9] rounded-lg">
             {" "}
             Book a free consultation{" "}
           </button>

@@ -58,7 +58,7 @@ const Home = () => {
                 <Image alt="Insider Logo" src={logo} />
               </div>
               <button
-                className="px-4 ml-4 rounded-xl bg-[#005EFF] text-white font-bold"
+                className="px-4 ml-4 rounded-xl bg-[#CACDE9] text-black font-bold"
                 onClick={scrollToEmailInput}
               >
                 Join the waitlist
@@ -67,15 +67,15 @@ const Home = () => {
           </nav>
 
           <section className="px-4" id="your-element-selector">
-            <div className="md:max-w-5xl md:mx-auto flex h-screen flex pt-24 md:pt-0 text-white">
+            <div className="md:max-w-5xl md:mx-auto flex h-screen flex pt-24 md:pt-0 text-black">
               <div className="grid md:grid-cols-2 my-auto">
                 <div className="m-auto">
-                  <h1 className="text-3xl md:text-5xl font-heading font-heading font-bold">
+                  <h1 className="text-3xl md:text-6xl font-heading font-heading font-bold">
                     Maximise customer lifetime value and financially reward your
                     most loyal customers
                   </h1>
                   <button
-                    className="p-4 bg-[#005EFF] rounded-lg text-white font-bold my-4"
+                    className="p-4 bg-[#CACDE9] rounded-lg text-black font-bold my-4 shadow-md"
                     onClick={scrollToEmailInput}
                   >
                     {" "}
@@ -90,9 +90,9 @@ const Home = () => {
           </section>
 
           <section className="text-black">
-            <div className="m-auto bg-[#005EFF] py-16 md:px-8 px-2 md:max-w-5xl md:mx-auto grid md:grid-cols-2 rounded-lg align-center">
+            <div className="m-auto bg-[#CACDE9] py-16 md:px-8 px-2 md:max-w-5xl md:mx-auto grid md:grid-cols-2 rounded-lg align-center">
               <div className="my-auto">
-                <p className="text-2xl md:text-4xl text-white font-para font-semibold pt-4">
+                <p className="text-2xl md:text-4xl text-black font-para font-semibold pt-4">
                   Insider is the new and easy way to launch NFT loyalty programs
                   and maximise customer lifetime value.
                 </p>
@@ -107,7 +107,7 @@ const Home = () => {
           </section>
 
           <HowItWorks scrollToEmailInput={scrollToEmailInput} />
-          <section className="my-8 py-16 bg-[#005EFF]">
+          <section className="my-8 py-16 bg-[#CACDE9]">
             <div className="flex flex-col justify-center align-center mx-auto max-w-5xl">
               <h1 className="text-center text-black text-2xl pb-8">
                 {" "}

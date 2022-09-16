@@ -21,7 +21,7 @@ a {
   }
   body {
     background-color: #CACDE9;
-    background:linear-gradient(to bottom, #CACDE9 0%, #04081F 100%);
+    background:linear-gradient(to bottom, #CACDE9, #04081F);
     /* background-image: url("../assets/Vector2.svg"); */
   }
 }
