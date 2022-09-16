@@ -19,10 +19,6 @@ a {
   html {
     color-scheme: dark;
   }
-  body {
-    background-image: url("../assets/Vector2.svg");
-    background-size: cover;
-  }
 }
 
 @tailwind base;
