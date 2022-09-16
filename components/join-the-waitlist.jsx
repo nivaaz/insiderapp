@@ -6,7 +6,7 @@ import { addEmailToWaitlist } from "../components/firebase";
 
 const JoinTheWaitList = (props) => {
   const [email, setEmail] = useState();
-  const [customerType, setCustomerType] = useState();
+  const [customerType, setCustomerType] = useState('Shopper');
   const [error, setError] = useState();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { app } = useContext(FirebaseContext);
