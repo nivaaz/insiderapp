@@ -51,14 +51,14 @@ const Home = () => {
         />
       </Head>
       <FirebaseContext.Provider value={app}>
-        <main className="w-full p-0 font-para">
+        <main className="w-full p-0 font-para bg-gradient-to-b from-primary">
           <nav className="w-full bg-white sticky top-0 z-50">
             <div className="md:max-w-5xl mx-auto flex justify-between">
-              <div className="w-28 py-0 my-0">
+              <div className="w-28 py-0 my-0 px-2">
                 <Image alt="Insider Logo" src={logo}/>
               </div>
               <button
-                className="px-4 ml-4 rounded-xl bg-black text-primary font-bold h-min py-2 my-auto"
+                className="px-4 ml-4 rounded-xl bg-black text-primary font-bold h-min py-2 my-auto mr-2"
                 onClick={scrollToEmailInput}
               >
                 Join the waitlist
