@@ -12,6 +12,9 @@ module.exports = {
       },
       colors:{
         primary: '#CACDE9'
+      },
+      animation:{
+        'spin-slow': 'spin 10s linear infinite',
       }
     },
   },

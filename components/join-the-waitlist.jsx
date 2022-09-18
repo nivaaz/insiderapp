@@ -91,7 +91,7 @@ const JoinTheWaitList = (props) => {
             </div>
             <p className="text-red font-bold"> {error}</p>
             <button
-              className="p-4 md:ml-4 rounded-xl bg-primary text-black font-bold"
+              className="p-4 md:ml-4 rounded-xl bg-primary text-black font-bold hover:bg-purple-200"
               onClick={handleClick}
             >
               Join the waiting list{" "}

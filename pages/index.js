@@ -27,7 +27,7 @@ const MyComponent = (props) => {
 
 const Home = () => {
   const myRef = useRef(null);
-  const scrollToEmailInput = () => myRef.current.scrollIntoView();
+  const scrollToEmailInput = () => myRef.current.scrollIntoView({behavior: "smooth"});
   const [loomvideo, setloomvideo] = useState();
 
   useEffect(() => {
@@ -35,25 +35,7 @@ const Home = () => {
     res.then((r) => {
       setloomvideo({ __html: r });
     });
-    var animation = anime({
-      targets: '.el.relative-values',
-      translateX: {
-        value: '*=2.5', // 100px * 2.5 = '250px'
-        duration: 1000
-      },
-      width: {
-        value: '-=20px', // 28 - 20 = '8px'
-        duration: 1800,
-        easing: 'easeInOutSine'
-      },
-      rotate: {
-        value: '+=2turn', // 0 + 2 = '2turn'
-        duration: 1800,
-        easing: 'easeInOutSine'
-      },
-      direction: 'alternate'
-    });
-    animation.play()
+    
   });
 
   return (
@@ -73,23 +55,31 @@ const Home = () => {
         />
       </Head>
       <FirebaseContext.Provider value={app}>
-        <main className="w-full p-0 font-para bg-primary bg-gradient-to-b from-primary bg-[url('../assets/Vector2.svg')] bg-cover">
-          <div className="absolute z-1"  id="smallbg">   <Image className="relative m-10" alt="Insider Logo" src={log1o} /> </div>
+        <main className="w-full p-0 font-para bg-primary from-primary bg-[url('../assets/Vector2.svg')] bg-cover">
+          <div className="absolute z-0 h-full w-full flex overflow-hidden">
+            {" "}
+            <Image
+            id="smallbg"
+              className="m-auto animate-spin-slow z-0"
+              alt="Insider Logo"
+              src={log1o}
+              onClick={scrollToEmailInput}
+            />{" "}
+          </div>
           <nav className="w-full bg-white sticky top-0 z-50">
             <div className="md:max-w-5xl mx-auto flex justify-between">
               <div className="w-28 py-0 my-0 px-2 pt-2">
                 <Image alt="Insider Logo" src={logo} />
               </div>
               <button
-                className="px-4 ml-4 rounded-xl bg-black text-primary font-bold h-min py-2 my-auto mr-2 cursor-pointer"
+                className="px-4 ml-4 rounded-xl bg-black hover:bg-slate-800 text-primary font-bold h-min py-2 my-auto mr-2 cursor-pointer"
                 onClick={scrollToEmailInput}
               >
                 Join the waitlist
               </button>
             </div>
           </nav>
-
-          <section className="px-4" id="your-element-selector">
+          <section id="your-element-selector" className="px-4">
             <div className="md:max-w-5xl md:mx-auto flex h-screen flex pt-24 md:pt-0 text-black">
               <div className="grid md:grid-cols-2 my-auto">
                 <div className="m-auto">
@@ -98,7 +88,7 @@ const Home = () => {
                     most loyal customers
                   </h1>
                   <button
-                    className="p-4 text-primary rounded-lg bg-black font-bold my-4 shadow-md"
+                    className="p-4 z-50 text-primary rounded-lg bg-black hover:bg-Violet-800 font-bold my-4 shadow-md"
                     onClick={scrollToEmailInput}
                   >
                     {" "}
@@ -113,7 +103,7 @@ const Home = () => {
           </section>
 
           <section className="text-black">
-            <div className="m-auto bg-primary py-16 md:px-8 px-2 md:max-w-5xl md:mx-auto grid md:grid-cols-2 rounded-lg align-center">
+            <div className="m-auto shadow-xl bg-primary py-16 md:px-8 px-2 md:max-w-5xl md:mx-auto grid md:grid-cols-2 rounded-lg align-center">
               <div className="my-auto">
                 <p className="text-2xl md:text-4xl text-black font-para font-semibold pt-4">
                   Insider offers powerful no-code tools to easily design and

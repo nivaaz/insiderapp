@@ -10,13 +10,13 @@ const HowItWorks = (props) => {
       <div className="m-auto my-24"> 
       <p className="mx-auto text-slate-800 pb-4 text-center"> Launch a program in 3 steps </p>
       <div className="flex flex-col md:flex-row"> 
-      <h2 className="text-4xl text-slate-800 md:text-7xl font-heading  md:px-2 pb-8 font-medium mx-auto">
+      <h2 className="text-4xl font-bold text-slate-800 md:text-7xl font-heading  md:px-2 pb-8 mx-auto">
         strategise.
       </h2>
-      <h2 className="text-4xl text-slate-800 md:text-7xl font-heading  md:px-2 pb-8 font-medium mx-auto">
+      <h2 className="text-4xl font-bold text-slate-800 md:text-7xl font-heading  md:px-2 pb-8 mx-auto">
          design.
       </h2>
-      <h2 className="text-4xl text-slate-800 italic md:text-7xl font-heading  md:px-2 pb-8 font-medium mx-auto">
+      <h2 className="text-4xl font-bold text-slate-800 italic md:text-7xl font-heading  md:px-2 pb-8 mx-auto">
          launch.
       </h2>
       </div>
@@ -85,7 +85,7 @@ const HowItWorks = (props) => {
               Insider provides you with a platform for customers to purchase
               your digital passes. Simply share the link.
             </p>
-            <button onClick={props.scrollToEmailInput} className="p-4 bg-black rounded-lg text-primary font-bold">
+            <button onClick={props.scrollToEmailInput} className="p-4 bg-black rounded-lg text-primary font-bold hover:bg-slate-800">
               Join the waitlist
             </button>
           </span>
