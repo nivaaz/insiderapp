@@ -49,7 +49,7 @@ const WhyInsider = () => {
         <div className="flex flex-col md:flex-row justify-center mx-auto">
           <p className="my-auto p-4 text-xl text-black"> Want to learn more? </p>
           <Link href="https://calendly.com/nivaaz">  
-           <p  className="p-4 text-black font-bold bg-primary-light hover:bg-primary rounded-lg cursor-pointer">  Book a free consultation</p></Link> 
+           <p  className="p-4 text-black font-bold bg-primary-light hover:primary-default rounded-lg cursor-pointer">  Book a free consultation</p></Link> 
            
          
         </div>

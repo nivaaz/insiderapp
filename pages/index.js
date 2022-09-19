@@ -126,7 +126,7 @@ const Home = () => {
           <div className="">
             <HowItWorks scrollToEmailInput={scrollToEmailInput} />{" "}
           </div>
-            <section className="my-8 py-16 bg-primary bg-opacity-50">
+            <section className="my-8 py-16 bg-primary-default bg-opacity-50">
               <div className="flex flex-col justify-center align-center mx-auto max-w-5xl">
                 <h1 className="font-medium text-center text-white text-5xl pb-8">
                   {" "}
