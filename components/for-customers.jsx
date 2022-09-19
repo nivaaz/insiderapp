@@ -13,7 +13,7 @@ const ForCustomers = () => {
           </h2>
           <div className="grid md:grid-cols-3 space-y-4 md:space-y-0 md:space-x-2  text-white">
             {/*  */}
-            <div className="flex flex-col bg-gradient-to-b to-slate-900 from-black rounded-lg border p-8 hover:border-blue-600">
+            <div className="flex flex-col bg-black bg-opacity-60 rounded-lg border p-8 hover:border-primary-light">
               <div> <Image alt="" src={build}/> </div>
               <h3 className="font-medium text-xl py-4"> Build with brands </h3>
               <p>
@@ -21,7 +21,7 @@ const ForCustomers = () => {
               </p>{" "}
             </div>
             {/*  */}
-            <div className="flex flex-col bg-gradient-to-b to-slate-900 from-black rounded-lg border p-8 hover:border-blue-600">
+            <div className="flex flex-col bg-black bg-opacity-60 rounded-lg border p-8 hover:border-primary-light">
               <div> <Image alt="" src={crown}/> </div>
               <h3 className="font-medium text-xl py-4"> Earn while engaging </h3>
               <p>
@@ -31,7 +31,7 @@ const ForCustomers = () => {
               </p>{" "}
             </div>
             {/*  */}
-            <div className="flex flex-col bg-gradient-to-b to-slate-900 from-black rounded-lg border p-8 hover:border-blue-600">
+            <div className="flex flex-col bg-black bg-opacity-60 rounded-lg border p-8 hover:border-primary-light">
               <div> <Image alt="" src={chat}/> </div>
               <h3 className="font-medium text-xl py-4"> Community </h3>
               <p>

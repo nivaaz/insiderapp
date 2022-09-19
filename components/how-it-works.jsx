@@ -8,24 +8,24 @@ const HowItWorks = (props) => {
     <section className="md:max-w-5xl md:mx-auto flex flex-col py-16 p-8 px-4 ">
 
       <div className="m-auto my-24"> 
-      <p className="mx-auto text-slate-800 pb-4 text-center"> Launch a program in 3 steps </p>
+      <p className="mx-auto text-white pb-4 text-center"> Launch a program in 3 steps </p>
       <div className="flex flex-col md:flex-row"> 
-      <h2 className="text-4xl font-bold text-slate-800 md:text-7xl font-heading  md:px-2 pb-8 mx-auto">
+      <h2 className="text-4xl font-medium text-white md:text-7xl font-heading  md:px-2 pb-8 mx-auto">
         strategise.
       </h2>
-      <h2 className="text-4xl font-bold text-slate-800 md:text-7xl font-heading  md:px-2 pb-8 mx-auto">
+      <h2 className="text-4xl font-medium text-white md:text-7xl font-heading  md:px-2 pb-8 mx-auto">
          design.
       </h2>
-      <h2 className="text-4xl font-bold text-slate-800 italic md:text-7xl font-heading  md:px-2 pb-8 mx-auto">
+      <h2 className="text-4xl font-bold text-white italic md:text-7xl font-heading  md:px-2 pb-8 mx-auto">
          launch.
       </h2>
       </div>
       </div>
-      <div className="p-4 md:p-8 rounded-lg bg-primary bg-opacity-70 text-black my-2 grid md:grid-cols-2 shadow-lg">
+      <div className="p-4 md:p-8 rounded-lg bg-black bg-opacity-60 text-white my-2 grid md:grid-cols-2 shadow-lg">
         <div>
           <div className="flex">
-            <div className="p-4 rounded-full bg-black w-16 h-16 mb-4 shadow-md">
-              <p className="max-w-md text-3xl text-center pb-2 text-primary font-bold">
+            <div className="p-4 rounded-full bg-white w-16 h-16 mb-4 shadow-md">
+              <p className="max-w-md text-3xl text-center pb-2 text-black font-bold">
                 1
               </p>
             </div>
@@ -45,11 +45,11 @@ const HowItWorks = (props) => {
         </div>
       </div>
 
-      <div className="p-4 md:p-8 rounded-lg bg-primary bg-opacity-70 text-black my-2 grid md:grid-cols-2 shadow-lg ">
+      <div className="p-4 md:p-8 rounded-lg bg-black bg-opacity-60 text-white my-2 grid md:grid-cols-2 shadow-lg ">
         <div>
           <div className="flex">
-            <div className="p-4 rounded-full bg-black w-16 h-16 mb-4 shadow-md">
-              <p className="max-w-md text-3xl text-center pb-2 text-primary font-bold">
+            <div className="p-4 rounded-full bg-white w-16 h-16 mb-4 shadow-md">
+              <p className="max-w-md text-3xl text-center pb-2 text-black font-bold">
                 {" "}
                 2{" "}
               </p>
@@ -70,11 +70,11 @@ const HowItWorks = (props) => {
         </div>
       </div>
 
-      <div className="p-4 md:p-8 rounded-lg bg-primary bg-opacity-70 text-black my-2 grid md:grid-cols-2 shadow-lg">
+      <div className="p-4 md:p-8 rounded-lg bg-black bg-opacity-60 text-white my-2 grid md:grid-cols-2 shadow-lg">
         <div>
           <div className="flex">
-            <div className="p-4 rounded-full bg-black w-16 h-16 mb-4 shadow-md ">
-              <p className="max-w-md text-3xl text-center pb-2 text-primary font-bold">
+            <div className="p-4 rounded-full bg-white w-16 h-16 mb-4 shadow-md ">
+              <p className="max-w-md text-3xl text-center pb-2 text-black font-bold">
                 3
               </p>
             </div>
@@ -85,7 +85,7 @@ const HowItWorks = (props) => {
               Insider provides you with a platform for customers to purchase
               your digital passes. Simply share the link.
             </p>
-            <button onClick={props.scrollToEmailInput} className="p-4 bg-black rounded-lg text-primary font-bold hover:bg-slate-800">
+            <button onClick={props.scrollToEmailInput} className="p-4 text-black rounded-lg bg-primary-light font-bold hover:bg-slate-800">
               Join the waitlist
             </button>
           </span>

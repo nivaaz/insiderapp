@@ -11,7 +11,11 @@ module.exports = {
         para: ["Source Sans Pro", "sans-serif"],
       },
       colors:{
-        primary: '#CACDE9'
+        primary:{
+          light: '#02FBFF',
+          dark: '#246D6F',
+          default: '#4EC8CA'
+        } 
       },
       animation:{
         'spin-slow': 'spin 10s linear infinite',

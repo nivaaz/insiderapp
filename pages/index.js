@@ -55,7 +55,7 @@ const Home = () => {
         />
       </Head>
       <FirebaseContext.Provider value={app}>
-        <main className="w-full p-0 font-para bg-primary from-primary bg-[url('../assets/Vector2.svg')] bg-cover">
+        <main className="w-full p-0 font-para bg-[#246D6F] bg-[url('../assets/Vector2.svg')] bg-cover">
           <div className="absolute z-0 h-full w-full flex overflow-hidden">
             {" "}
             <Image
@@ -72,7 +72,7 @@ const Home = () => {
                 <Image alt="Insider Logo" src={logo} />
               </div>
               <button
-                className="px-4 ml-4 rounded-xl bg-black hover:bg-slate-800 text-primary font-bold h-min py-2 my-auto mr-2 cursor-pointer"
+                className="px-4 ml-4 rounded-xl bg-primary-light hover:bg-slate-800 text-black font-bold h-min py-2 my-auto mr-2 cursor-pointer"
                 onClick={scrollToEmailInput}
               >
                 Join the waitlist
@@ -80,15 +80,15 @@ const Home = () => {
             </div>
           </nav>
           <section id="your-element-selector" className="px-4">
-            <div className="md:max-w-5xl md:mx-auto flex h-screen flex pt-24 md:pt-0 text-black">
+            <div className="md:max-w-5xl md:mx-auto flex h-screen pt-24 md:pt-0 text-white">
               <div className="grid md:grid-cols-2 my-auto">
                 <div className="m-auto">
-                  <h1 className="text-3xl md:text-6xl font-heading font-heading font-bold">
+                  <h1 className="text-3xl md:text-6xl font-heading font-bold">
                     Maximise customer lifetime value and financially reward your
                     most loyal customers
                   </h1>
                   <button
-                    className="p-4 z-50 text-primary rounded-lg bg-black hover:bg-Violet-800 font-bold my-4 shadow-md"
+                    className="p-4 z-50 text-black rounded-lg bg-primary-light hover:bg-Violet-800 font-bold my-4 shadow-md"
                     onClick={scrollToEmailInput}
                   >
                     {" "}
@@ -103,7 +103,7 @@ const Home = () => {
           </section>
 
           <section className="text-black">
-            <div className="m-auto shadow-xl bg-primary py-16 md:px-8 px-2 md:max-w-5xl md:mx-auto grid md:grid-cols-2 rounded-lg align-center">
+            <div className="m-auto shadow-xl bg-white bg-opacity-90 py-16 md:px-8 px-2 md:max-w-5xl md:mx-auto grid md:grid-cols-2 rounded-lg align-center">
               <div className="my-auto">
                 <p className="text-2xl md:text-4xl text-black font-para font-semibold pt-4">
                   Insider offers powerful no-code tools to easily design and
@@ -126,10 +126,9 @@ const Home = () => {
           <div className="">
             <HowItWorks scrollToEmailInput={scrollToEmailInput} />{" "}
           </div>
-          <div className="bg-gradient-to-t from-slate-900 w-full">
             <section className="my-8 py-16 bg-primary bg-opacity-50">
               <div className="flex flex-col justify-center align-center mx-auto max-w-5xl">
-                <h1 className="font-medium text-center text-black text-5xl pb-8">
+                <h1 className="font-medium text-center text-white text-5xl pb-8">
                   {" "}
                   See Insider in action
                 </h1>
@@ -139,7 +138,6 @@ const Home = () => {
 
             <WhyInsider />
             <ForCustomers />
-          </div>
           <FirebaseContext.Consumer>
             {() => (
               <>

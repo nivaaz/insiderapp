@@ -15,7 +15,7 @@ const WhyInsider = () => {
           {/*  */}
           <div className="grid md:grid-cols-3 space-y-4 md:space-y-0 md:space-x-2  text-white">
             {/*  */}
-            <div className="flex flex-col bg-gradient-to-b from-[#000627] to-black rounded-lg border p-8 hover:border-blue-600">
+            <div className="flex flex-col bg-black bg-opacity-60 rounded-lg border p-8 hover:border-primary-light">
               <div> <Image alt="" src={user}/> </div>
               <h3 className="font-medium text-xl py-4"> New Customers </h3>
               <p>
@@ -25,7 +25,7 @@ const WhyInsider = () => {
               </p>{" "}
             </div>
             {/*  */}
-            <div className="flex flex-col bg-gradient-to-b from-[#000627] to-black rounded-lg border p-8 hover:border-blue-600">
+            <div className="flex flex-col bg-black bg-opacity-60 rounded-lg border p-8 hover:border-primary-light">
               <div> <Image alt="" src={graph}/> </div>
               <h3 className="font-medium text-xl py-4"> Grow Revenue </h3>
               <p>
@@ -34,7 +34,7 @@ const WhyInsider = () => {
               </p>{" "}
             </div>
             {/*  */}
-            <div className="flex flex-col bg-gradient-to-b from-[#000627] to-black rounded-lg border p-8 hover:border-blue-600">
+            <div className="flex flex-col bg-black bg-opacity-60 rounded-lg border p-8 hover:border-primary-light">
               <div> <Image alt="" src={star}/> </div>
               <h3 className="font-medium text-xl py-4"> Retain customers </h3>
               <p>
@@ -45,11 +45,11 @@ const WhyInsider = () => {
           </div>
         </div>
       </section>
-      <div className="flex py-16 md:py-0 px-2">
-        <div className="flex flex-col md:flex-row text-white justify-center mx-auto">
-          <p className="my-auto p-4 text-xl"> Want to learn more? </p>
+      <div className="flex py-16 px-2 bg-white">
+        <div className="flex flex-col md:flex-row justify-center mx-auto">
+          <p className="my-auto p-4 text-xl text-black"> Want to learn more? </p>
           <Link href="https://calendly.com/nivaaz">  
-           <p  className="p-4 text-black font-bold bg-primary hover:bg-purple-200 rounded-lg cursor-pointer">  Book a free consultation</p></Link> 
+           <p  className="p-4 text-black font-bold bg-primary-light hover:bg-primary rounded-lg cursor-pointer">  Book a free consultation</p></Link> 
            
          
         </div>
