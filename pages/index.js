@@ -12,7 +12,6 @@ import JoinTheWaitList from "../components/join-the-waitlist";
 import mintingSite from "../assets/minting-page.png";
 import { useEffect, useRef, useState } from "react";
 import { oembed } from "@loomhq/loom-embed";
-import anime from "animejs";
 
 const getHtml = async () => {
   const res = await oembed(
@@ -55,7 +54,7 @@ const Home = () => {
         />
       </Head>
       <FirebaseContext.Provider value={app}>
-        <main className="w-full p-0 font-para bg-[#246D6F] bg-[url('../assets/Vector2.svg')] bg-cover">
+        <main className="w-full p-0 font-para bg-primary-dark bg-[url('../assets/Vector2.svg')] bg-cover">
           <div className="absolute z-0 h-full w-full flex overflow-hidden">
             {" "}
             <Image
@@ -66,7 +65,7 @@ const Home = () => {
               onClick={scrollToEmailInput}
             />{" "}
           </div>
-          <nav className="w-full bg-white sticky top-0 z-50">
+          <nav className="w-full  backdrop-blur-lg sticky top-0 z-50">
             <div className="md:max-w-5xl mx-auto flex justify-between">
               <div className="w-28 py-0 my-0 px-2 pt-2">
                 <Image alt="Insider Logo" src={logo} />
