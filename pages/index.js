@@ -79,7 +79,7 @@ const Home = () => {
             </div>
           </nav>
           <section id="your-element-selector" className="px-4">
-            <div className="md:max-w-5xl md:mx-auto flex h-screen pt-24 md:pt-0 text-white">
+            <div className="md:max-w-5xl md:mx-auto flex h-screen pt-24 md:pt-0 text-black">
               <div className="grid md:grid-cols-2 my-auto">
                 <div className="m-auto">
                   <h1 className="text-3xl md:text-6xl font-heading font-bold">
@@ -127,7 +127,7 @@ const Home = () => {
           </div>
             <section className="my-8 py-16 bg-primary-default bg-opacity-50">
               <div className="flex flex-col justify-center align-center mx-auto max-w-5xl">
-                <h1 className="font-medium text-center text-white text-5xl pb-8">
+                <h1 className="font-medium text-center text-black text-5xl pb-8">
                   {" "}
                   See Insider in action
                 </h1>

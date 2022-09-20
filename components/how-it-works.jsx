@@ -8,15 +8,15 @@ const HowItWorks = (props) => {
     <section className="md:max-w-5xl md:mx-auto flex flex-col py-16 p-8 px-4 ">
 
       <div className="m-auto my-24"> 
-      <p className="mx-auto text-white pb-4 text-center"> Launch a program in 3 steps </p>
+      <p className="mx-auto text-black pb-4 text-center"> Launch a program in 3 steps </p>
       <div className="flex flex-col md:flex-row"> 
-      <h2 className="text-4xl font-medium text-white md:text-7xl font-heading  md:px-2 pb-8 mx-auto">
+      <h2 className="text-4xl font-medium text-black md:text-7xl font-heading  md:px-2 pb-8 mx-auto">
         strategise.
       </h2>
-      <h2 className="text-4xl font-medium text-white md:text-7xl font-heading  md:px-2 pb-8 mx-auto">
+      <h2 className="text-4xl font-medium text-black md:text-7xl font-heading  md:px-2 pb-8 mx-auto">
          design.
       </h2>
-      <h2 className="text-4xl font-bold text-white italic md:text-7xl font-heading  md:px-2 pb-8 mx-auto">
+      <h2 className="text-4xl font-bold text-black italic md:text-7xl font-heading  md:px-2 pb-8 mx-auto">
          launch.
       </h2>
       </div>

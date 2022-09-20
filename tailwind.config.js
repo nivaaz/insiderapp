@@ -12,9 +12,9 @@ module.exports = {
       },
       colors:{
         primary:{
-          light: '#02FBFF',
-          dark: '#246D6F',
-          default: '#4EC8CA'
+          light: '#ECEEFD',
+          dark: '#CACDE9',
+          default: '#CACDE9'
         } 
       },
       animation:{

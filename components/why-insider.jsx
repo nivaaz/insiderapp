@@ -9,7 +9,7 @@ const WhyInsider = () => {
     <>
       <section className="md:py-32 space-y-16 px-4">
         <div className="md:max-w-5xl md:mx-auto">
-          <h2 className="text-4xl font-heading py-10 font-bold text-white">
+          <h2 className="text-4xl font-heading py-10 font-bold text-black">
             Designed for brands
           </h2>
           {/*  */}
