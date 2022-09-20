@@ -71,7 +71,7 @@ const Home = () => {
                 <Image alt="Insider Logo" src={logo} />
               </div>
               <button
-                className="px-4 ml-4 rounded-xl bg-primary-light hover:bg-slate-800 text-black font-bold h-min py-2 my-auto mr-2 cursor-pointer"
+                className="px-4 ml-4 rounded-xl text-primary-light hover:bg-slate-800 bg-black font-bold h-min py-2 my-auto mr-2 cursor-pointer"
                 onClick={scrollToEmailInput}
               >
                 Join the waitlist
@@ -87,7 +87,7 @@ const Home = () => {
                     most loyal customers
                   </h1>
                   <button
-                    className="p-4 z-50 text-black rounded-lg bg-primary-light hover:bg-Violet-800 font-bold my-4 shadow-md"
+                    className="p-4 z-50 bg-black rounded-lg text-primary-light hover:bg-Violet-800 font-bold my-4 shadow-md"
                     onClick={scrollToEmailInput}
                   >
                     {" "}

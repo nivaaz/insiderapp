@@ -85,7 +85,7 @@ const HowItWorks = (props) => {
               Insider provides you with a platform for customers to purchase
               your digital passes. Simply share the link.
             </p>
-            <button onClick={props.scrollToEmailInput} className="p-4 text-black rounded-lg bg-primary-light font-bold hover:bg-slate-800">
+            <button onClick={props.scrollToEmailInput} className="p-4 bg-black rounded-lg text-primary-light font-bold hover:bg-slate-800">
               Join the waitlist
             </button>
           </span>

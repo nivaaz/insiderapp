@@ -39,7 +39,7 @@ const JoinTheWaitList = (props) => {
           <p className="pb-8 mx-auto text-xl md:text-4xl">
             Be the first to know when we launch
             <FontAwesomeIcon
-              color="#246D6F"
+              color="#712396"
               icon={faRocket}
               size="2xs"
               className="md:pl-4 -mb-2"
@@ -91,7 +91,7 @@ const JoinTheWaitList = (props) => {
             </div>
             <p className="text-red font-bold"> {error}</p>
             <button
-              className="p-4 md:ml-4 rounded-xl bg-primary-light text-black font-bold hover:bg-purple-200"
+              className="p-4 md:ml-4 rounded-xl text-primary-light bg-black font-bold hover:bg-purple-200"
               onClick={handleClick}
             >
               Join the waiting list{" "}
