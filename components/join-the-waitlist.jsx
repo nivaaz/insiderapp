@@ -55,7 +55,7 @@ const JoinTheWaitList = (props) => {
                 My email is
                 <input
                   onChange={(e) => setEmail(e.target.value)}
-                  className="bg-white rounded-lg p-4 text-black px-1"
+                  className="bg-white rounded-lg p-4 text-black px-1 border border-gray-200"
                   placeholder="ada@lovelace.com"
                   type="email"
                   id="email"
@@ -78,13 +78,16 @@ const JoinTheWaitList = (props) => {
                   }}
                 >
                   <option className="text-black" value="shopper">
-                    Shopper
+                    a shopper
                   </option>
                   <option className="text-black" value="investor">
-                    Investor{" "}
+                    an investor{" "}
                   </option>
                   <option className="text-black" value="business owner">
-                    Business Owner
+                    a business owner
+                  </option>
+                  <option className="text-black" value="marketer">
+                    a marketer/innovator
                   </option>
                 </select>
               </label>
