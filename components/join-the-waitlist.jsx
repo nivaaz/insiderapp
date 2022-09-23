@@ -46,6 +46,8 @@ const JoinTheWaitList = (props) => {
               bounce
             />
           </p>
+          <p className="text-center text-pink-500 font-bold"> {error}</p>
+
           <span
             ref={props.refProp}
             className="mx-auto flex flex-col space-y-8  align-center md:flex-row justify-center"
@@ -55,7 +57,7 @@ const JoinTheWaitList = (props) => {
                 My email is
                 <input
                   onChange={(e) => setEmail(e.target.value)}
-                  className="bg-white rounded-lg p-4 text-black px-1 border border-gray-200"
+                  className="bg-white rounded-lg border border-violet-500 text-black p-4"
                   placeholder="ada@lovelace.com"
                   type="email"
                   id="email"
@@ -72,33 +74,34 @@ const JoinTheWaitList = (props) => {
                 <select
                   name="customerType"
                   id="customerType"
-                  className="bg-white text-black border rounded-md py-4 px-1"
+                  className="bg-white text-black border border-violet-500 rounded-lg p-4"
                   onChange={(e) => {
                     setCustomerType(e.target.value);
                   }}
                 >
-                  <option className="text-black" value="shopper">
+                  <option className="text-black py-4" value="shopper">
                     a shopper
                   </option>
-                  <option className="text-black" value="investor">
+                  <option className="text-black py-4" value="investor">
                     an investor{" "}
                   </option>
-                  <option className="text-black" value="business owner">
+                  <option className="text-black py-4" value="business owner">
                     a business owner
                   </option>
-                  <option className="text-black" value="marketer">
+                  <option className="text-black py-4 my-4" value="marketer">
                     a marketer/innovator
                   </option>
                 </select>
               </label>
             </div>
-            <p className="text-red font-bold"> {error}</p>
+            <div className="flex"> 
             <button
-              className="p-4 md:ml-4 rounded-xl text-primary-light bg-black font-bold hover:bg-purple-200"
+              className="mt-auto mb-0 p-4 md:ml-4 rounded-xl text-primary-light bg-violet-700 font-bold hover:bg-violet-900"
               onClick={handleClick}
             >
               Join the waiting list{" "}
             </button>
+            </div>
           </span>
         </div>
       </section>
