@@ -17,9 +17,6 @@ module.exports = {
           default: '#CACDE9'
         } 
       },
-      animation:{
-        'spin-slow': 'spin 10s linear infinite',
-      }
     },
   },
   plugins: [],
