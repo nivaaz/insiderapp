@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import graph from "../assets/graph.svg"
 import star from "../assets/star.svg"
 import user from "../assets/user.svg"
@@ -48,8 +47,8 @@ const WhyInsider = () => {
       <div className="flex py-16 px-2 bg-white">
         <div className="flex flex-col md:flex-row justify-center mx-auto">
           <p className="my-auto p-4 text-xl text-black"> Want to learn more? </p>
-          <Link href="https://calendly.com/nivaaz">  
-           <p  className="p-4 text-white font-bold bg-black hover:primary-default rounded-lg cursor-pointer">  Book a free consultation</p></Link> 
+          <a target="__blank" href="https://calendly.com/foundersinsider">  
+           <p  className="p-4 text-white font-bold bg-black hover:primary-default rounded-lg cursor-pointer">  Book a free consultation</p></a> 
            
          
         </div>
