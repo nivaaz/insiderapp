@@ -96,7 +96,7 @@ const JoinTheWaitList = (props) => {
           </div>
           <div className="flex">
             <button
-              className="mt-auto mb-0 p-4 md:ml-4 rounded-xl text-primary-light bg-violet-700 font-bold hover:bg-violet-900"
+              className={clsx("mt-auto mb-0 p-4 rounded-xl text-primary-light bg-violet-700 font-bold hover:bg-violet-900", props.grid ? 'ml-1' : 'md:ml-4' )}
               onClick={handleClick}
             >
               Join the waiting list{" "}

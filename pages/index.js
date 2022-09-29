@@ -78,6 +78,7 @@ const Home = () => {
                 <FirebaseContext.Consumer>
                   {() => (
                     <div className="mt-16"> 
+                    <p className="font-para font-semibold text-lg ml-1 mb-4"> Be the first to know when we launch!</p>
                     <JoinTheWaitList myRef={myRef} grid/>
                     </div>
                   )}
