@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/globals.css";
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-config.autoAddCss = false
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { FirebaseContext } from "../components/firebaseProvider";
+config.autoAddCss = false;
+import { app } from "../components/firebase";
+import { getAnalytics } from "firebase/analytics";
 
-function MyApp ({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+const MyApp = ({ Component, pageProps }) => {
+  useEffect(() => {
+    const analytics = getAnalytics(app);
+  }, []);
+  return (
+    <FirebaseContext.Provider value={app}>
+      <Component {...pageProps} />
+    </FirebaseContext.Provider>
+  );
 };
 
 export default MyApp;

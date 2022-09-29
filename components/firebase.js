@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getDatabase, push, ref, set } from "firebase/database";
+import { get, getDatabase, push, ref, set } from "firebase/database";
 
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
@@ -20,9 +20,9 @@ export const app = initializeApp(firebaseConfig);
 
 // Initialize Realtime Database and get a reference to the service
 
-export function addEmailToWaitlist(app,  email, customerType) {
+export function addEmailToWaitlist(app, email, customerType) {
   const db = getDatabase(app);
-  const postListRef = ref(db, 'emailList');
+  const postListRef = ref(db, "emailList");
   const newPostRef = push(postListRef);
   set(newPostRef, {
     customerType: customerType,
@@ -30,3 +30,22 @@ export function addEmailToWaitlist(app,  email, customerType) {
   });
 }
 
+export const getNumberOfSignUps = async (app) => {
+  const db = getDatabase(app);
+  const dbRef = ref(db, "emailList");
+  let numSignup = "100+";
+
+  const x =  await get(dbRef)
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        numSignup = Object.keys(snapshot?.val()).length;
+        return numSignup;
+      } else {
+        console.log("No data available");
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+    return x
+};
