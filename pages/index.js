@@ -11,6 +11,8 @@ import JoinTheWaitList from "../components/join-the-waitlist";
 import mintingSite from "../assets/minting-page.png";
 import { useEffect, useRef, useState } from "react";
 import { oembed } from "@loomhq/loom-embed";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckCircle, faCopy } from "@fortawesome/free-solid-svg-icons";
 
 const getHtml = async () => {
   const res = await oembed(
@@ -28,6 +30,16 @@ const Home = () => {
   const scrollToEmailInput = () =>
     myRef.current.scrollIntoView({ behavior: "smooth" });
   const [loomvideo, setloomvideo] = useState();
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText("founders@insiderapp.xyz");
+    setCopiedEmail(true);
+    setTimeout(() => {
+      setCopiedEmail(false);
+    }, 5000);
+  };
+
+  const [copiedEmail, setCopiedEmail] = useState(false);
 
   useEffect(() => {
     const res = getHtml();
@@ -74,12 +86,15 @@ const Home = () => {
                   Maximise customer lifetime value and financially reward your
                   most loyal customers
                 </h1>
-                
+
                 <FirebaseContext.Consumer>
                   {() => (
-                    <div className="mt-16"> 
-                    <p className="font-para font-semibold text-lg ml-1 mb-4"> Be the first to know when we launch!</p>
-                    <JoinTheWaitList myRef={myRef} grid/>
+                    <div className="mt-16">
+                      <p className="font-para font-semibold text-lg ml-1 mb-4">
+                        {" "}
+                        Be the first to know when we launch!
+                      </p>
+                      <JoinTheWaitList myRef={myRef} grid />
                     </div>
                   )}
                 </FirebaseContext.Consumer>
@@ -139,6 +154,42 @@ const Home = () => {
             {() => <JoinTheWaitList myRef={myRef} showTitle />}
           </FirebaseContext.Consumer>
         </div>
+        <section className="text-center bg-white mx-auto p-2 md:p-16 rounded-lg flex flex-col justify-center py-32 space-y-2 text-black">
+          <h2 className="pb-8 text-xl"> Get in touch</h2>
+
+          <p
+            className="hover:underline  my-auto hover:text-purple-500 py-4 cursor-pointer"
+            onClick={copyEmail}
+          >
+            {" "}
+            founders@insiderapp.xyz{" "}
+            {!copiedEmail ? (
+              <FontAwesomeIcon icon={faCopy} size="md" className="md:pl-4" />
+            ) : (
+              <div className="flex">
+                {" "}
+                <p className="bg-purple-200 text-center m-auto rounded-md p-4  my-auto">
+                  {" "}
+                  copied email{" "}
+                  <FontAwesomeIcon
+                    icon={faCheckCircle}
+                    size="lg"
+                    className="pl-2"
+                  />
+                </p>
+              </div>
+            )}{" "}
+          </p>
+          <a
+            className="hover:underline hover:text-purple-500 py-4  my-auto"
+            target="_blank"
+            rel="noreferrer"
+            href="https://calendly.com/foundersinsider"
+          >
+            {" "}
+            calendly.com/foundersinsider{" "}
+          </a>
+        </section>
       </main>
     </div>
   );
