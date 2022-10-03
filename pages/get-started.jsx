@@ -8,12 +8,12 @@ const GetStarted = () => {
   const handleInputChange = (e) => {
     const { value, name } = e.target;
     const updatedState = { ...formValues };
-    if (name === "passImage"){
-      console.log(e.target.files)
+    if (name === "passImage") {
+      console.log(e.target.files);
       const url = URL.createObjectURL(e.target.files[0]); // this might need to be value.
       updatedState[name] = url;
       setFormValues(updatedState);
-    }  else {
+    } else {
       updatedState[name] = value;
       setFormValues(updatedState);
     }
@@ -28,15 +28,18 @@ const GetStarted = () => {
       <section className=" border border-teal-200 w-full mx-auto min-h-screen flex">
         <div className="m-auto text-white text-center">
           <h1 className="text-2xl py-8 font-heading">
-            Get Started with Insider
+            Launch Loyalty Passes with Insider
             {/* TODO: replace this with the logo */}
           </h1>
+          <p>1. Tell us about your brand</p>
+          <p>2. Tell us about your loyalty pass collection</p>
+          <p>3. Design your loyalty pass collection</p>
+          <p>4. Preview & share your collection</p>
           <p
-            className="cursor-pointer py-4 px-8 bg-teal-300 text-black font-bold"
+            className="cursor-pointer py-4 px-8 bg-teal-300 text-black font-bold mt-8"
             onClick={scrollToEmailInput}
           >
-          
-            Let&apos;s go{" "}
+            Let&apos;s go
           </p>
         </div>
       </section>
@@ -80,10 +83,9 @@ const GetStarted = () => {
       </section>
 
       <Section>
-      <p className="text-5xl text-teal-200">2</p>
+        <p className="text-5xl text-teal-200">2</p>
 
         <h2 className="text-xl py-8">
-        
           Describe the NFT collection you want to create
         </h2>
         <label className="pt-4">
@@ -120,8 +122,8 @@ const GetStarted = () => {
       </Section>
 
       <Section>
-      <p className="text-5xl text-teal-200">3</p>
-       
+        <p className="text-5xl text-teal-200">3</p>
+
         <h2 className="text-xl py-8">Design your pass</h2>
         <label className="pt-4">
           Upload an image for your pass
@@ -129,7 +131,7 @@ const GetStarted = () => {
             onChange={handleInputChange}
             className="text-white border-b border-primary-default m-1 bg-transparent hover:border-teal-900"
             type="file"
-            name = "passImage"
+            name="passImage"
             accept="image/*"
           />
         </label>
@@ -154,12 +156,10 @@ const GetStarted = () => {
           />
         </label>
         <p>
-        
           Each pass can have up to 3 unique trait categories. Each triat
-          category have 1 out of 3 trait values.{" "}
+          category have 1 out of 3 trait values.
         </p>
         <p>
-        
           For example, a trait category might be star sign, and the 3 triats
           values could be Capricorn, Aquarius and Leo.
         </p>
@@ -204,29 +204,56 @@ const GetStarted = () => {
           />
         </label>
         {/* // TODO: automate adding new traits and trait values  */}
-        <Button
+       
+      </Section>
+ {/* TODO: describe the persk that come with this loaylty pass  */}
+      <Section>
+        <p className="text-5xl text-teal-200">4</p>
+
+        <h2 className="text-xl py-8">Tell us about the pass perks</h2>
+        <label className="py-4">
+          What perks can customers expect to get by purchasing the pass?
+          <textarea
+            placeholder="-Access to cookie making classes"
+            name="passPerks"
+            onChange={handleInputChange}
+            className="block w-full text-white border-b border-primary-default m-1 bg-transparent hover:border-teal-900"
+            type="text"
+          />
+        </label>
+       
+      </Section>
+      <div className="max-w-xl mx-auto">
+
+      <Button
           copy="Preview collection"
           variant="primary"
           onClick={() => {
             setPreview(true);
           }}
         />
-      </Section>
-
+      </div>
       {preview && (
         <Section>
-          <div> 
-          <h3> {formValues?.collectionName}</h3>
-          <p> by {formValues.brandName} </p>
-          
-          <p className="font-bold text-xl"> {formValues.collectionName}</p>
-          <p className="font-bold"> Our motivation for this collection is: </p>
-           <p> {formValues.motivation}</p>
-           <p> This collection has {formValues.numberOfNfts} passes. Each pass will have one of the following unique traits: {formValues.trait1Category}</p>
-            <Image width={200} height={200} alt="pass image" src={formValues.passImage}/>
-          </div>
-          <div> 
-            {/* <Image src = {}/> */}
+          <div>
+          <p className="text-5xl text-teal-200 py-4">Preview</p>
+            <h3> {formValues?.collectionName}</h3>
+            <p> by {formValues.brandName} </p>
+
+            <p className="font-bold text-xl"> {formValues.collectionName}</p>
+            <p className="font-bold">Our motivation for this collection is:</p>
+            <p> {formValues.motivation}</p>
+            <p>
+              This collection has {formValues.numberOfNfts} passes. Each pass
+              will have one of the following unique traits:
+              {formValues.trait1Category}
+            </p>
+            <Image
+              width={200}
+              height={200}
+              alt="pass image"
+              src={formValues.passImage}
+            />
           </div>
         </Section>
       )}
@@ -235,7 +262,6 @@ const GetStarted = () => {
 };
 export default GetStarted;
 
-// might need to be props children
 const Section = (props) => (
   <section className=" border border-teal-200 p-4 pb-12 w-full max-w-xl mx-auto font-para grid">
     <>{props.children}</>
