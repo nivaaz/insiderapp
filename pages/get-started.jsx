@@ -24,10 +24,10 @@ const GetStarted = () => {
     myRef.current.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <div className="w-full flex flex-col space-y-8 p-4 pb-16">
-      <section className=" border border-teal-200 w-full mx-auto min-h-screen flex">
+    <div className="w-full flex flex-col space-y-8 p-4 pb-16 bg-purple-100 text-black">
+      <section className=" border border-black w-full mx-auto min-h-screen flex">
       
-        <div className="m-auto text-white text-center">
+        <div className="m-auto text-center">
           <h1 className="text-2xl py-8 font-heading">
             Launch Loyalty Passes with Insider
             {/* TODO: replace this with the logo */}
@@ -36,18 +36,17 @@ const GetStarted = () => {
           <p>2. Tell us about your loyalty pass collection</p>
           <p>3. Design your loyalty pass collection</p>
           <p>4. Preview & share your collection</p>
-          <p
-            className="cursor-pointer py-4 px-8 bg-teal-300 text-black font-bold mt-8"
+          <div className="flex justify-center pt-8"> 
+          <Button copy="Let's go" variant="primary"
             onClick={scrollToEmailInput}
-          >
-            Let&apos;s go
-          </p>
+            />
+            </div>
         </div>
       </section>
-      <div className="grid grid-cols-2 relative">
+      <div className="grid md:grid-cols-2 relative">
         <div className="m-auto space-y-8">
           <Section ref={myRef}>
-            <p className="text-5xl text-teal-200">1</p>
+            <p className="text-5xl text-black">1</p>
             <h2 className="text-xl py-8">
               {" "}
               Tell us a little bit about your brand
@@ -58,7 +57,7 @@ const GetStarted = () => {
                 placeholder="cool cookies"
                 name="brandName"
                 onChange={handleInputChange}
-                className="text-white border-b border-primary-default m-1 bg-transparent hover:border-teal-900"
+                className= "border-b border-primary-default m-1 bg-transparent hover:border-black"
                 type="text"
               />
             </label>
@@ -68,7 +67,7 @@ const GetStarted = () => {
                 placeholder="We ship cold cookies right to your doorstep."
                 name="brandDescription"
                 onChange={handleInputChange}
-                className="block w-full text-white border-b border-primary-default m-1 bg-transparent hover:border-teal-900"
+                className="block w-full border-b border-primary-default m-1 bg-transparent hover:border-black"
                 type="text"
               />
             </label>
@@ -78,13 +77,13 @@ const GetStarted = () => {
                 name="website"
                 placeholder="coolcookies.xyz"
                 onChange={handleInputChange}
-                className="text-white border-b border-primary-default m-1 bg-transparent hover:border-teal-900"
+                className= "border-b border-primary-default m-1 bg-transparent hover:border-black"
                 type="url"
               />
             </label>
           </Section>
           <Section>
-            <p className="text-5xl text-teal-200">2</p>
+            <p className="text-5xl text-black">2</p>
 
             <h2 className="text-xl py-8">
               Describe the NFT collection you want to create
@@ -95,7 +94,7 @@ const GetStarted = () => {
                 placeholder="to have a loyalty program that rewards 'our Coolers (shoppers) and connect them so they can share recpeies with eachother."
                 name="motivation"
                 onChange={handleInputChange}
-                className="block w-full text-white border-b border-primary-default m-1 bg-transparent hover:border-teal-900"
+                className="block w-full border-b border-primary-default m-1 bg-transparent hover:border-black"
                 type="text"
               />
             </label>
@@ -105,7 +104,7 @@ const GetStarted = () => {
                 name="collectionName"
                 onChange={handleInputChange}
                 placeholder="Cooler Cookies Collection"
-                className="w-full text-white border-b border-primary-default m-1 bg-transparent hover:border-teal-900"
+                className="w-full border-b border-primary-default m-1 bg-transparent hover:border-black"
                 type="text"
               />
             </label>
@@ -115,21 +114,21 @@ const GetStarted = () => {
                 name="numberOfNfts"
                 placeholder="200"
                 onChange={handleInputChange}
-                className="text-white border-b border-primary-default m-1 bg-transparent hover:border-teal-900"
+                className= "border-b border-primary-default m-1 bg-transparent hover:border-black"
                 type="url"
               />
               loyalty passes
             </label>
           </Section>
           <Section>
-            <p className="text-5xl text-teal-200">3</p>
+            <p className="text-5xl text-black">3</p>
 
             <h2 className="text-xl py-8">Design your pass</h2>
             <label className="pt-4">
               Upload an image for your pass
               <input
                 onChange={handleInputChange}
-                className="text-white border-b border-primary-default m-1 bg-transparent hover:border-teal-900"
+                className=" border-b border-primary-default m-1 bg-transparent hover:border-black"
                 type="file"
                 name="passImage"
                 accept="image/*"
@@ -141,7 +140,7 @@ const GetStarted = () => {
                 placeholder="$100USD"
                 name="passPrice"
                 onChange={handleInputChange}
-                className="text-white border-b border-primary-default m-1 bg-transparent hover:border-teal-900"
+                className=" border-b border-primary-default m-1 bg-transparent hover:border-black"
                 type="text"
               />
             </label>
@@ -151,7 +150,7 @@ const GetStarted = () => {
                 placeholder="$100USD"
                 name="passRoyalty"
                 onChange={handleInputChange}
-                className="text-white border-b border-primary-default m-1 bg-transparent hover:border-teal-900"
+                className=" border-b border-primary-default m-1 bg-transparent hover:border-black"
                 type="text"
               />
             </label>
@@ -169,7 +168,7 @@ const GetStarted = () => {
                 placeholder="star sign"
                 name="trait1Category"
                 onChange={handleInputChange}
-                className="text-white border-b border-primary-default m-1 bg-transparent hover:border-teal-900"
+                className="border-b border-primary-default m-1 bg-transparent hover:border-black"
                 type="text"
               />
             </label>
@@ -179,7 +178,7 @@ const GetStarted = () => {
                 placeholder="leo"
                 name="trait1Value1"
                 onChange={handleInputChange}
-                className="text-white border-b border-primary-default m-1 bg-transparent hover:border-teal-900"
+                className="border-b border-primary-default m-1 bg-transparent hover:border-black"
                 type="text"
               />
             </label>
@@ -189,7 +188,7 @@ const GetStarted = () => {
                 placeholder="cancer"
                 name="trait1Value2"
                 onChange={handleInputChange}
-                className="text-white border-b border-primary-default m-1 bg-transparent hover:border-teal-900"
+                className="border-b border-primary-default m-1 bg-transparent hover:border-black"
                 type="text"
               />
             </label>
@@ -199,7 +198,7 @@ const GetStarted = () => {
                 placeholder="capricorn"
                 name="trait1Value3"
                 onChange={handleInputChange}
-                className="text-white border-b border-primary-default m-1 bg-transparent hover:border-teal-900"
+                className="border-b border-primary-default m-1 bg-transparent hover:border-black"
                 type="text"
               />
             </label>
@@ -207,8 +206,7 @@ const GetStarted = () => {
           </Section>
           {/* TODO: describe the persk that come with this loaylty pass  */}
           <Section>
-            <p className="text-5xl text-teal-200">4</p>
-
+            <p className="text-5xl text-black">4</p>
             <h2 className="text-xl py-8">Tell us about the pass perks</h2>
             <label className="py-4">
               What perks can customers expect to get by purchasing the pass?
@@ -216,18 +214,18 @@ const GetStarted = () => {
                 placeholder="-Access to cookie making classes"
                 name="passPerks"
                 onChange={handleInputChange}
-                className="block w-full text-white border-b border-primary-default m-1 bg-transparent hover:border-teal-900"
+                className="block w-full border-b border-primary-default m-1 bg-transparent hover:border-black"
                 type="text"
               />
             </label>
           </Section>{" "}
         </div>
         <div className="h-full">
-            <div className="sticky top-0 h-screen flex">
+            <div className="md:sticky top-0 h-screen flex">
               <div className="m-auto"> 
-              <p className="text-5xl text-teal-200 py-4">Preview</p>
-              <div className="m-auto border border-teal-500 rounded-xl p-4 space-y-4"> 
-              <h3 className="text-teal-200 italic text-xl"> {formValues?.collectionName ?? 'Collection Name'}</h3>
+              <p className="text-5xl text-black py-4">Preview</p>
+              <div className="m-auto border border-black rounded-xl p-4 space-y-4"> 
+              <h3 className="text-black italic text-xl"> {formValues?.collectionName ?? 'Collection Name'}</h3>
               <p> by {formValues.brandName ?? 'Brand'} </p>
 
               <p className="font-bold">
@@ -267,7 +265,7 @@ export default GetStarted;
 
 const Section = (props) => (
   <div className="h-screen flex" ref={props.ref}> 
-  <section className="m-auto border border-teal-200 p-4 pb-12 w-full max-w-xl mx-auto font-para grid">
+  <section className="m-auto border border-black p-4 pb-12 w-full max-w-xl mx-auto font-para grid">
     <>{props.children}</>
   </section>
   </div>

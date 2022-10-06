@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { get, getDatabase, push, ref, set } from "firebase/database";
 
 // TODO: Replace the following with your app's Firebase project configuration
@@ -49,3 +50,22 @@ export const getNumberOfSignUps = async (app) => {
     });
     return x
 };
+
+//  **** AUTH **** 
+export const createUser = async (auth, email, password) =>{
+  console.log(auth)
+   const usr = await createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      console.log(user)
+      return user;
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+     throw Error(errorMessage)
+    });
+    return usr
+}
