@@ -1,5 +1,4 @@
 import logo from "../assets/logoimage.svg";
-import log1o from "../assets/small-bg.svg";
 import Head from "next/head";
 import { FirebaseContext } from "../components/firebaseProvider";
 import ForCustomers from "../components/for-customers";
@@ -13,6 +12,7 @@ import { useEffect, useRef, useState } from "react";
 import { oembed } from "@loomhq/loom-embed";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle, faCopy } from "@fortawesome/free-solid-svg-icons";
+import React from 'react'
 
 const getHtml = async () => {
   const res = await oembed(
@@ -21,7 +21,7 @@ const getHtml = async () => {
   return res.html;
 };
 
-const MyComponent = (props) => {
+const LoomVideo = (props) => {
   return <div dangerouslySetInnerHTML={props.loomvideo} />;
 };
 
@@ -40,7 +40,29 @@ const Home = () => {
   };
 
   const [copiedEmail, setCopiedEmail] = useState(false);
+ 
 
+useEffect(()=>{
+  let observer  = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+      console.log(entry);
+      if (entry.isIntersecting){
+      entry.target.classList.add('showem');
+        entry.target.classList.remove('hidem');
+       
+      } else {
+        entry.target.classList.remove('showem');
+        entry.target.classList.add('hidem');
+
+      }
+    })
+  });
+  
+  const hiddenElement = document.querySelectorAll('section');
+  hiddenElement.forEach(el=>observer.observe(el));
+}, [])
+  
+  
   useEffect(() => {
     const res = getHtml();
     res.then((r) => {
@@ -109,7 +131,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section></section>
         <section className="text-black">
           <div className="m-auto shadow-xl bg-white bg-opacity-90 py-16 md:px-8 px-2 md:max-w-5xl md:mx-auto grid md:grid-cols-2 rounded-lg align-center">
             <div className="my-auto">
@@ -140,7 +161,7 @@ const Home = () => {
               {" "}
               See Insider in action
             </h1>
-            <MyComponent loomvideo={loomvideo} />{" "}
+            <LoomVideo loomvideo={loomvideo} />{" "}
           </div>
         </section>
 
@@ -161,15 +182,14 @@ const Home = () => {
             className="hover:underline  my-auto hover:text-purple-500 py-4 cursor-pointer"
             onClick={copyEmail}
           >
-            {" "}
+           
             founders@insiderapp.xyz{" "}
             {!copiedEmail ? (
-              <FontAwesomeIcon icon={faCopy} size="md" className="md:pl-4" />
+              <FontAwesomeIcon icon={faCopy} size="lg" className="md:pl-4" />
             ) : (
               <div className="flex">
                 {" "}
                 <p className="bg-purple-200 text-center m-auto rounded-md p-4  my-auto">
-                  {" "}
                   copied email{" "}
                   <FontAwesomeIcon
                     icon={faCheckCircle}

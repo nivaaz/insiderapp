@@ -1,18 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/globals.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FirebaseContext } from "../components/firebaseProvider";
-config.autoAddCss = false;
 import { app } from "../components/firebase";
 import { getAnalytics } from "firebase/analytics";
+import { getAuth } from "firebase/auth";
+import "../styles/globals.css"
+config.autoAddCss = false;
 
 const MyApp = ({ Component, pageProps }) => {
+  const [analytics, setanalytics] = useState(null);
+  const [auth, setauth] = useState(null);
   useEffect(() => {
-    const analytics = getAnalytics(app);
+    setanalytics( getAnalytics(app));
+    setauth( getAuth(app));
   }, []);
   return (
-    <FirebaseContext.Provider value={app}>
+    <FirebaseContext.Provider value={{ app: app, auth: auth }}>
       <Component {...pageProps} />
     </FirebaseContext.Provider>
   );

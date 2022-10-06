@@ -21,6 +21,20 @@ a {
   }
 }
 
+/* animations for landing page */
+.hidem {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+}
+
+.showem {
+  opacity: 1;
+  transition: all 1s;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
