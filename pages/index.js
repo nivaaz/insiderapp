@@ -5,7 +5,7 @@ import ForCustomers from "../components/for-customers";
 import HowItWorks from "../components/how-it-works";
 import WhyInsider from "../components/why-insider";
 import passes from "../assets/header-passes.svg";
-import metaImage from "../assets/metaImage.svg";
+import metaImage from "../assets/metaimage.png";
 import Image from "next/image";
 import JoinTheWaitList from "../components/join-the-waitlist";
 import mintingSite from "../assets/minting-page.png";
