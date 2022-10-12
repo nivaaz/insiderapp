@@ -96,14 +96,15 @@ useEffect(()=>{
         <meta property="og:url" content="https://www.insiderapp.xyz/"/>
         <meta property="og:title" content="Insider | Loyalty & community powered by the blockchain"/>
         <meta property="og:description" content="Insider is a no-code tool to build engaging loyalty programs and brand communities powered by the blockchain."/>
-        <meta property="og:image" content={metaImage}/>
+        <meta property="og:image" content="/_next/static/media/metaimage.974babd1.png"/>
 
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://www.insiderapp.xyz/"/>
         <meta property="twitter:title" content="Insider | Loyalty & community powered by the blockchain"/>
         <meta property="twitter:description" content="Insider is a no-code tool to build engaging loyalty programs and brand communities powered by the blockchain."/>
-        <meta property="twitter:image" content={metaImage}/>
+        <meta property="twitter:image" content="/_next/static/media/metaimage.974babd1.png"/>
       </Head>
+      
       <main className="w-full p-0 font-para bg-primary-dark bg-[url('../assets/Vector2.svg')] bg-cover">
         <nav className="w-full  backdrop-blur-lg sticky top-0 z-50">
           <div className="md:max-w-5xl mx-auto flex justify-between">
