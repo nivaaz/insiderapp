@@ -5,6 +5,7 @@ import ForCustomers from "../components/for-customers";
 import HowItWorks from "../components/how-it-works";
 import WhyInsider from "../components/why-insider";
 import passes from "../assets/header-passes.svg";
+import metaImage from "../assets/metaImage.svg";
 import Image from "next/image";
 import JoinTheWaitList from "../components/join-the-waitlist";
 import mintingSite from "../assets/minting-page.png";
@@ -13,6 +14,7 @@ import { oembed } from "@loomhq/loom-embed";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle, faCopy } from "@fortawesome/free-solid-svg-icons";
 import React from 'react'
+
 
 const getHtml = async () => {
   const res = await oembed(
@@ -47,7 +49,7 @@ useEffect(()=>{
     entries.forEach((entry)=>{
       console.log(entry);
       if (entry.isIntersecting){
-      entry.target.classList.add('showem');
+        entry.target.classList.add('showem');
         entry.target.classList.remove('hidem');
        
       } else {
@@ -85,6 +87,22 @@ useEffect(()=>{
           href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400;1,700&display=swap"
           rel="stylesheet"
         />
+
+        <title>Insider | Loyalty & community powered by the blockchain</title>
+        <meta name="title" content="Insider | Loyalty & community powered by the blockchain"/>
+        <meta name="description" content="Insider is a no-code tool to build engaging loyalty programs and brand communities powered by the blockchain."/>
+
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://www.insiderapp.xyz/"/>
+        <meta property="og:title" content="Insider | Loyalty & community powered by the blockchain"/>
+        <meta property="og:description" content="Insider is a no-code tool to build engaging loyalty programs and brand communities powered by the blockchain."/>
+        <meta property="og:image" content={metaImage}/>
+
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://www.insiderapp.xyz/"/>
+        <meta property="twitter:title" content="Insider | Loyalty & community powered by the blockchain"/>
+        <meta property="twitter:description" content="Insider is a no-code tool to build engaging loyalty programs and brand communities powered by the blockchain."/>
+        <meta property="twitter:image" content={metaImage}/>
       </Head>
       <main className="w-full p-0 font-para bg-primary-dark bg-[url('../assets/Vector2.svg')] bg-cover">
         <nav className="w-full  backdrop-blur-lg sticky top-0 z-50">

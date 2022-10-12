@@ -7,6 +7,7 @@ import { app } from "../components/firebase";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 import "../styles/globals.css"
+import Head from "next/head";
 config.autoAddCss = false;
 
 const MyApp = ({ Component, pageProps }) => {
@@ -16,11 +17,14 @@ const MyApp = ({ Component, pageProps }) => {
     setanalytics( getAnalytics(app));
     setauth( getAuth(app));
   }, []);
-  return (
+  return (<>
+  <Head> 
+    
+  </Head>
     <FirebaseContext.Provider value={{ app: app, auth: auth }}>
       <Component {...pageProps} />
     </FirebaseContext.Provider>
-  );
+    </>);
 };
 
 export default MyApp;
