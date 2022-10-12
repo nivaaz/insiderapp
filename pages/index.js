@@ -91,18 +91,19 @@ useEffect(()=>{
         <title>Insider | Loyalty & community powered by the blockchain</title>
         <meta name="title" content="Insider | Loyalty & community powered by the blockchain"/>
         <meta name="description" content="Insider is a no-code tool to build engaging loyalty programs and brand communities powered by the blockchain."/>
+        <meta name="image" content="https://insiderapp.xyz/_next/static/media/metaimage.974babd1.png"/>
 
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://www.insiderapp.xyz/"/>
+        <meta property="og:url" content="https://insiderapp.xyz/"/>
         <meta property="og:title" content="Insider | Loyalty & community powered by the blockchain"/>
         <meta property="og:description" content="Insider is a no-code tool to build engaging loyalty programs and brand communities powered by the blockchain."/>
-        <meta property="og:image" content="/_next/static/media/metaimage.974babd1.png"/>
+        <meta property="og:image" content="https://insiderapp.xyz/_next/static/media/metaimage.974babd1.png"/>
 
         <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:url" content="https://www.insiderapp.xyz/"/>
+        <meta property="twitter:url" content="https://insiderapp.xyz/"/>
         <meta property="twitter:title" content="Insider | Loyalty & community powered by the blockchain"/>
         <meta property="twitter:description" content="Insider is a no-code tool to build engaging loyalty programs and brand communities powered by the blockchain."/>
-        <meta property="twitter:image" content="/_next/static/media/metaimage.974babd1.png"/>
+        <meta property="twitter:image" content="https://insiderapp.xyz/_next/static/media/metaimage.974babd1.png"/>
       </Head>
       
       <main className="w-full p-0 font-para bg-primary-dark bg-[url('../assets/Vector2.svg')] bg-cover">
