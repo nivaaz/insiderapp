@@ -50,11 +50,10 @@ const JoinTheWaitList = (props) => {
         )}
         <p className="text-center text-pink-500 font-bold"> {error}</p>
         <span
-          // ref={props.refProp} className={clsx("mx-auto flex flex-col md:flex-row space-y-8 align-center  justify-center", "grid grid-flow-row" && props.grid)}>
           ref={props.refProp} className={clsx(props.grid? 'flex-row' : 'flex flex-col md:flex-row', 'mx-auto space-y-8 align-center justify-center')}>
           <div className="flex flex-col mt-auto">
             <label className="grid px-1">
-              My email is {props.grid ?? 'false'}
+              My email is 
               <input
                 onChange={(e) => setEmail(e.target.value)}
                 className="bg-white rounded-lg border border-violet-500 text-black p-4"
@@ -70,7 +69,7 @@ const JoinTheWaitList = (props) => {
           <div className="flex flex-col mt-0">
             <label className="grid px-1">
               {" "}
-              And I am
+              and I am
               <select
                 name="customerType"
                 id="customerType"

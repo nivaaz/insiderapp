@@ -15,9 +15,9 @@ const ForCustomers = () => {
             {/*  */}
             <div className="flex flex-col bg-black bg-opacity-60 rounded-lg border p-8 hover:border-primary-light">
               <div> <Image alt="" src={build}/> </div>
-              <h3 className="font-medium text-xl py-4"> Build with brands </h3>
+              <h3 className="font-medium text-xl py-4"> Own your data </h3>
               <p>
-                Customers can be a part of your product development process and are incentivised to provide feedback.
+              Gain autonomy over your personal data - including who you share it with and how you get paid for it.
               </p>{" "}
             </div>
             {/*  */}

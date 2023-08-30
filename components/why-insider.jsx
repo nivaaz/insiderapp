@@ -35,7 +35,7 @@ const WhyInsider = () => {
             {/*  */}
             <div className="flex flex-col bg-black bg-opacity-60 rounded-lg border p-8 hover:border-primary-light">
               <div> <Image alt="" src={star}/> </div>
-              <h3 className="font-medium text-xl py-4"> Retain customers </h3>
+              <h3 className="font-medium text-xl py-4"> Richer data insights </h3>
               <p>
                 {" "}
                 Digital passes let you clearly find superfans and reward them for their engagement - which is all built into the platform!
@@ -48,7 +48,7 @@ const WhyInsider = () => {
         <div className="flex flex-col md:flex-row justify-center mx-auto">
           <p className="my-auto p-4 text-xl text-black"> Want to learn more? </p>
           <a target="__blank" href="https://calendly.com/foundersinsider">  
-           <p  className="p-4 text-white font-bold bg-black hover:primary-default rounded-lg cursor-pointer">  Book a free consultation</p></a> 
+           <p  className="p-4 font-bold text-black bg-primary-default border border-white hover:border-black hover:shadow-md rounded-lg cursor-pointer">  Book a free consultation</p></a> 
            
          
         </div>
