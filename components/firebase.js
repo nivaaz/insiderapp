@@ -1,11 +1,10 @@
-import { initializeApp } from "firebase/app";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { get, getDatabase, push, ref, set } from "firebase/database";
 
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_apiKey,
   authDomain: process.env.NEXT_PUBLIC_authDomain,
   databaseURL: process.env.NEXT_PUBLIC_databaseURL,
@@ -16,12 +15,9 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_measurementId,
 };
 
-// Initialize Firebase
-export const app = initializeApp(firebaseConfig);
-
 // Initialize Realtime Database and get a reference to the service
 
-export function addEmailToWaitlist(app, email, customerType) {
+export const addEmailToWaitlist = (app, email, customerType) => {
   const db = getDatabase(app);
   const postListRef = ref(db, "emailList");
   const newPostRef = push(postListRef);
@@ -29,14 +25,14 @@ export function addEmailToWaitlist(app, email, customerType) {
     customerType: customerType,
     email: email,
   });
-}
+};
 
 export const getNumberOfSignUps = async (app) => {
   const db = getDatabase(app);
   const dbRef = ref(db, "emailList");
   let numSignup = "100+";
 
-  const x =  await get(dbRef)
+  const x = await get(dbRef)
     .then((snapshot) => {
       if (snapshot.exists()) {
         numSignup = Object.keys(snapshot?.val()).length;
@@ -48,24 +44,22 @@ export const getNumberOfSignUps = async (app) => {
     .catch((error) => {
       console.error(error);
     });
-    return x
+  return x;
 };
 
-//  **** AUTH **** 
-export const createUser = async (auth, email, password) =>{
-  console.log(auth)
-   const usr = await createUserWithEmailAndPassword(auth, email, password)
+//  **** AUTH ****
+export const createUser = async (auth, email, password) => {
+  const usr = await createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      // Signed in 
+      // Signed in
       const user = userCredential.user;
-      console.log(user)
       return user;
       // ...
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-     throw Error(errorMessage)
+      throw Error(errorMessage);
     });
-    return usr
-}
+  return usr;
+};
