@@ -19,9 +19,8 @@ export const FirebaseProvider = ({ children }) => {
     if (app) {
       setanalytics(getAnalytics(app));
       setauth(getAuth(app));
-      console.log("✅");
     } else {
-      console.error("app not init");
+      console.error("not init");
     }
   }, [app]);
 

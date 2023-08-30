@@ -34,7 +34,6 @@ const SignUp = () => {
 
   const handleSubmit = () => {
     const user = createUser(auth, formValues.email, formValues.password);
-    console.log({ user });
   };
   return (
     <div className="w-screen h-screen flex">

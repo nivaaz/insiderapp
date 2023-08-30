@@ -10,7 +10,6 @@ const GetStarted = () => {
     const { value, name } = e.target;
     const updatedState = { ...formValues };
     if (name === "passImage") {
-      console.log(e.target.files);
       const url = URL.createObjectURL(e.target.files[0]); // this might need to be value.
       updatedState[name] = url;
       setFormValues(updatedState);
@@ -20,9 +19,9 @@ const GetStarted = () => {
     }
   };
   // scroll to form
-  const myRef = useRef(null);
+  const myref = useRef(null);
   const scrollToEmailInput = () =>
-    myRef.current.scrollIntoView({ behavior: "smooth" });
+    myref.current.scrollIntoView({ behavior: "smooth" });
 
   return (
     <div className="w-full flex flex-col space-y-8 p-4 pb-16 bg-purple-100 text-black">
@@ -46,7 +45,7 @@ const GetStarted = () => {
         </div>
       </section>
       <div className="grid md:grid-cols-2 relative">
-        <div className="m-auto space-y-8" ref={myRef}>
+        <div className="m-auto space-y-8" ref={myref}>
           <Section>
             <p  className="text-5xl text-black">1</p>
             <h2 className="text-xl py-8">
@@ -280,8 +279,3 @@ const Section = (props) => (
     </section>
   </div>
 );
-
-const Tag = () => {
-  const styles = clsx("px-4 py-1");
-  return <p className={styles}> tag </p>;
-};
