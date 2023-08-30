@@ -1,7 +1,7 @@
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useContext, useRef, useState } from "react";
-import { FirebaseContext } from "./firebaseProvider";
+import { useRef, useState } from "react";
+import { useFirebase } from "./firebaseProvider";
 import { addEmailToWaitlist} from "../components/firebase";
 import clsx from 'clsx';
 
@@ -10,7 +10,7 @@ const JoinTheWaitList = (props) => {
   const [customerType, setCustomerType] = useState("Shopper");
   const [error, setError] = useState();
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const { app } = useContext(FirebaseContext);
+  const {app} = useFirebase();
   const textInput = useRef(null);
 
   const handleClick = () => {

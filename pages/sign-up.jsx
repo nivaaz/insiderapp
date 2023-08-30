@@ -1,13 +1,13 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import Button from "../components/design-system/button";
 import { createUser } from "../components/firebase";
-import { FirebaseContext } from "../components/firebaseProvider";
+import { FirebaseContext, useFirebase } from "../components/firebaseProvider";
 
 const SignUp = () => {
   const [formValues, setFormValues] = useState({});
   const [validForm, setValidForm] = useState(false);
   const [validFormMessage, setValidFormMessage] = useState(null);
-  const { auth } = useContext(FirebaseContext);
+  const firebase =useFirebase();
 
   const hasFilledForm = () => {
     return formValues.email && formValues.password;
@@ -33,7 +33,7 @@ const SignUp = () => {
   };
 
   const handleSubmit = () => {
-    const user = createUser(auth, formValues.email, formValues.password);
+    const user = createUser(firebase?.auth, formValues.email, formValues.password);
   };
   return (
     <div className="w-screen h-screen flex">
@@ -67,8 +67,5 @@ const SignUp = () => {
   );
 };
 
-const SignUpWrapper = () => (
-  <FirebaseContext.Consumer>{() => <SignUp />}</FirebaseContext.Consumer>
-);
 
-export default SignUpWrapper;
+export default SignUp;

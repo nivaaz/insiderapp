@@ -1,6 +1,6 @@
 import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState, useContext } from "react";
 import { firebaseConfig } from "./firebase";
 import { initializeApp } from "firebase/app";
 
@@ -23,10 +23,12 @@ export const FirebaseProvider = ({ children }) => {
       console.error("not init");
     }
   }, [app]);
-
+ 
   return (
     <FirebaseContext.Provider value={{ app, auth, analytics }}>
       {children}
     </FirebaseContext.Provider>
   );
 };
+
+export const useFirebase = ()=> (useContext(FirebaseContext));
