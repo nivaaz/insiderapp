@@ -17,7 +17,7 @@ const ForCustomers = () => {
               <div> <Image alt="" src={build}/> </div>
               <h3 className="font-medium text-xl py-4"> Own your data </h3>
               <p>
-              Gain autonomy over your personal data - including who you share it with and how you get paid for it.
+              Customers can gain autonomy over their personal data - including who they share it with and how they get paid for it.
               </p>{" "}
             </div>
             {/*  */}
@@ -35,7 +35,7 @@ const ForCustomers = () => {
               <div> <Image alt="" src={chat}/> </div>
               <h3 className="font-medium text-xl py-4"> Community </h3>
               <p>
-                Customers can connect on topics dedicated to sharing advice, reviews and creating content. Create cult communities around your brand, at scale.
+                Customers can connect on topics dedicated to sharing advice, reviews and creating content. Brands can create cult communities at scale.
               </p>{" "}
             </div>
           </div>

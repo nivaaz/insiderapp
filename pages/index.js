@@ -128,7 +128,7 @@ const Home = () => {
               className="px-4 ml-4 rounded-xl text-primary-light hover:bg-violet-900 bg-black font-bold h-min py-2 my-auto mr-2 cursor-pointer"
               onClick={scrollToEmailInput}
             >
-              Join the waitlist
+              Contact Us
             </button>
           </div>
         </nav>

@@ -86,7 +86,7 @@ const HowItWorks = (props) => {
               your digital passes. Simply share the link. Leverage the digital passes to personalise experiences and activate customer communities.
             </p>
             <button onClick={props.scrollToEmailInput} className="p-4 rounded-lg text-black bg-primary-default font-bold hover:bg-black hover:text-primary-default">
-              Join the waitlist
+              Contact Us
             </button>
           </span>
         </div>
